@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>West Michigan Roof Health | Free Storm Damage Inspection</title>
+  <meta name="description" content="Get a free 24-hour roof health check in West Michigan. 90% of storm damage is invisible from the ground. We find what your insurance missed." />
+
+  <!-- META PIXEL CODE — Replace YOUR_PIXEL_ID -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_PIXEL_ID');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
+  <!-- END META PIXEL CODE -->
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0f1f3d;
+      --blue: #1d4ed8;
+      --blue-light: #3b82f6;
+      --accent: #f59e0b;
+      --grey-100: #f3f4f6;
+      --grey-400: #9ca3af;
+      --grey-600: #4b5563;
+      --white: #ffffff;
+      --radius: 10px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: #111827;
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--navy);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      color: var(--white);
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+    .logo span { color: var(--accent); }
+    header a.call-link {
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(160deg, var(--navy) 0%, #1e3a6e 100%);
+      color: var(--white);
+      text-align: center;
+      padding: 60px 24px 48px;
+    }
+    .hero .badge {
+      display: inline-block;
+      background: rgba(245,158,11,0.15);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: clamp(1.6rem, 5vw, 2.6rem);
+      font-weight: 800;
+      line-height: 1.2;
+      max-width: 680px;
+      margin: 0 auto 16px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--accent);
+    }
+    .hero p {
+      font-size: clamp(1rem, 2.5vw, 1.15rem);
+      color: #cbd5e1;
+      max-width: 560px;
+      margin: 0 auto 32px;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: var(--accent);
+      color: #1a1100;
+      font-size: 1.1rem;
+      font-weight: 800;
+      padding: 16px 36px;
+      border-radius: var(--radius);
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.15s;
+      width: 100%;
+      max-width: 360px;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(245,158,11,0.35); }
+    .hero-sub {
+      margin-top: 14px;
+      font-size: 0.82rem;
+      color: #94a3b8;
+    }
+
+    /* ── TRUST BAR ── */
+    .trust-bar {
+      background: var(--grey-100);
+      padding: 16px 24px;
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+    .trust-bar .item {
+      font-size: 0.82rem;
+      color: var(--grey-600);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .trust-bar .item svg { flex-shrink: 0; }
+
+    /* ── SECTIONS ── */
+    section { padding: 56px 24px; }
+    .section-label {
+      text-align: center;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+    h2 {
+      text-align: center;
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 40px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ── 3 STEPS ── */
+    .steps { background: var(--white); }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 28px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .step-card {
+      background: var(--grey-100);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      text-align: center;
+    }
+    .step-num {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: var(--white);
+      font-size: 1.1rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+    .step-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
+    .step-card p { font-size: 0.9rem; color: var(--grey-600); }
+
+    /* ── SOCIAL PROOF ── */
+    .proof { background: var(--navy); color: var(--white); }
+    .proof h2 { color: var(--white); }
+    .testimonial {
+      max-width: 660px;
+      margin: 0 auto;
+      background: rgba(255,255,255,0.08);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 28px 28px 24px;
+      text-align: left;
+    }
+    .testimonial blockquote {
+      font-size: 1.05rem;
+      font-style: italic;
+      color: #e2e8f0;
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+    .testimonial .attribution {
+      font-size: 0.85rem;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .stars { color: var(--accent); font-size: 1.1rem; margin-bottom: 10px; }
+
+    /* ── FORM ── */
+    .form-section { background: var(--grey-100); }
+    .form-section h2 { margin-bottom: 8px; }
+    .form-section .sub {
+      text-align: center;
+      color: var(--grey-600);
+      font-size: 0.95rem;
+      margin-bottom: 32px;
+    }
+    form {
+      max-width: 520px;
+      margin: 0 auto;
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 36px 28px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    }
+    .form-group { margin-bottom: 18px; }
+    label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    input, select {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1.5px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 1rem;
+      color: #111827;
+      background: var(--white);
+      transition: border-color 0.15s;
+      -webkit-appearance: none;
+    }
+    input:focus, select:focus {
+      outline: none;
+      border-color: var(--blue-light);
+      box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+    }
+    .btn-submit {
+      width: 100%;
+      background: var(--accent);
+      color: #1a1100;
+      font-size: 1.1rem;
+      font-weight: 800;
+      padding: 16px;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      margin-top: 8px;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .btn-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(245,158,11,0.35); }
+    .form-disclaimer {
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--grey-400);
+      margin-top: 14px;
+    }
+    #success-msg {
+      display: none;
+      text-align: center;
+      padding: 28px;
+      background: #ecfdf5;
+      border: 1.5px solid #6ee7b7;
+      border-radius: var(--radius);
+      color: #065f46;
+      font-weight: 700;
+      font-size: 1rem;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy);
+      color: #64748b;
+      text-align: center;
+      padding: 24px;
+      font-size: 0.8rem;
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 480px) {
+      form { padding: 24px 18px; }
+      .trust-bar { gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">West Michigan <span>Roof Health</span></div>
+    <a class="call-link" href="tel:+16165550000">&#128222; Free Inspection</a>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="badge">&#9889; Limited Spots — Storm Season 2025</div>
+    <h1>Has Your Roof Been Damaged by<br><em>Recent West Michigan Storms?</em></h1>
+    <p>Get a Free 24-Hour Roof Health Check. 90% of storm damage is invisible from the ground. We find what your insurance missed.</p>
+    <a href="#form" class="btn-primary">Check My Roof Now — It's Free</a>
+    <p class="hero-sub">No cost. No obligation. Results in 24 hours.</p>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="item">
+      <svg width="16" height="16" fill="none" stroke="#1d4ed8" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      100% Free Inspection
+    </div>
+    <div class="item">
+      <svg width="16" height="16" fill="none" stroke="#1d4ed8" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      Results in 24 Hours
+    </div>
+    <div class="item">
+      <svg width="16" height="16" fill="none" stroke="#1d4ed8" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+      Insurance Claim Specialists
+    </div>
+    <div class="item">
+      <svg width="16" height="16" fill="none" stroke="#1d4ed8" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+      West Michigan Locals
+    </div>
+  </div>
+
+  <!-- 3 STEPS -->
+  <section class="steps">
+    <p class="section-label">How It Works</p>
+    <h2>Three Steps to a Free Full Report</h2>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3>Request Your Free Check</h3>
+        <p>Fill out the quick form below. Takes 60 seconds. No commitment required.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3>We Audit Your Roof</h3>
+        <p>Our team performs a full drone and satellite inspection of your property within 24 hours.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3>Get Your Full Report</h3>
+        <p>Receive a detailed damage report — and we'll guide you through the insurance claim process at no cost.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF -->
+  <section class="proof">
+    <p class="section-label" style="color: var(--accent);">Real West Michigan Homeowners</p>
+    <h2>What Happens When You Don't Get Checked</h2>
+    <div class="testimonial">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <blockquote>"Our insurance company said everything looked fine after the spring storm. West Michigan Roof Health found hidden granule loss and soft spots we never would have caught. They handled the entire claim — we got a full replacement for $0 out of pocket."</blockquote>
+      <div class="attribution">— Sarah M., Grand Rapids Homeowner</div>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section class="form-section" id="form">
+    <p class="section-label">Claim Your Free Spot</p>
+    <h2>Get Your Free Roof Health Check</h2>
+    <p class="sub">We're accepting a limited number of free inspections this month. Secure yours now.</p>
+
+    <form id="lead-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <!-- Hidden fields for tracking -->
+      <input type="hidden" name="_subject" value="New Roof Health Lead" />
+      <input type="hidden" name="lead_id" id="lead_id_field" />
+      <input type="hidden" name="_next" value="" />
+
+      <div class="form-group">
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" placeholder="John Smith" required autocomplete="name" />
+      </div>
+      <div class="form-group">
+        <label for="phone">Mobile Phone *</label>
+        <input type="tel" id="phone" name="phone" placeholder="(616) 555-0000" required autocomplete="tel" />
+      </div>
+      <div class="form-group">
+        <label for="address">Home Address *</label>
+        <input type="text" id="address" name="address" placeholder="123 Main St, Grand Rapids, MI" required autocomplete="street-address" />
+      </div>
+      <div class="form-group">
+        <label for="roof_age">Approximate Roof Age</label>
+        <select id="roof_age" name="roof_age">
+          <option value="" disabled selected>Select an option</option>
+          <option value="under-5">Under 5 years</option>
+          <option value="5-10">5–10 years</option>
+          <option value="10-20">10–20 years</option>
+          <option value="20-plus">20+ years</option>
+          <option value="unknown">Not sure</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn-submit">Check My Roof Now — 100% Free &#8594;</button>
+      <p class="form-disclaimer">By submitting, you agree to be contacted about your free roof inspection. We respect your privacy and never sell your information.</p>
+    </form>
+
+    <div id="success-msg">
+      &#10003; You're on the list! A team member will contact you within 24 hours to schedule your free roof inspection.
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 West Michigan Roof Health. Grand Rapids, MI &nbsp;|&nbsp; <a href="mailto:info@westmi-roof-health.com" style="color:#64748b;">info@westmi-roof-health.com</a></p>
+    <p style="margin-top:6px;">Not affiliated with any insurance company. Free inspection offer subject to availability.</p>
+  </footer>
+
+  <script>
+    // Generate unique lead_id on page load
+    function generateLeadId() {
+      const ts = Date.now().toString(36).toUpperCase();
+      const rand = Math.random().toString(36).substring(2, 7).toUpperCase();
+      return 'WMRH-' + ts + '-' + rand;
+    }
+
+    document.getElementById('lead_id_field').value = generateLeadId();
+
+    // Fire Meta Pixel Lead event on form submit
+    const form = document.getElementById('lead-form');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      if (typeof fbq !== 'undefined') {
+        fbq('track', 'Lead');
+      }
+
+      const data = new FormData(form);
+
+      fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(res => {
+        if (res.ok) {
+          form.style.display = 'none';
+          document.getElementById('success-msg').style.display = 'block';
+          window.scrollTo({ top: document.getElementById('form').offsetTop, behavior: 'smooth' });
+        } else {
+          alert('Something went wrong. Please call us directly or try again.');
+        }
+      }).catch(() => {
+        alert('Something went wrong. Please call us directly or try again.');
+      });
+    });
+
+    // Smooth scroll for hero CTA
+    document.querySelectorAll('a[href="#form"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        document.getElementById('form').scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+
+</body>
+</html>
