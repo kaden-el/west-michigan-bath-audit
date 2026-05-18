@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How the Audit Works | West Michigan Bath Audit</title>
+  <meta name="description" content="The full West Michigan Bath Audit process — from form submission to specialist match. What to expect at every step, with zero pressure." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231F4D5A'/%3E%3Cpath d='M16 36c0-3 2-5 5-5h22c3 0 5 2 5 5v6c0 3-2 5-5 5H21c-3 0-5-2-5-5z' fill='%23FAF7F2'/%3E%3Cpath d='M22 31V22c0-3 2-5 5-5h10c3 0 5 2 5 5v9' fill='none' stroke='%23FAF7F2' stroke-width='2.5'/%3E%3C/svg%3E" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --teal: #1F4D5A; --teal-dark: #163844; --teal-soft: #2A6577;
+      --cream: #FAF7F2; --cream-warm: #F4EFE5;
+      --brass: #B08D57; --brass-dark: #8E7144;
+      --ink: #1A1A1A; --ink-soft: #4A4A4A; --ink-light: #7A7A7A;
+      --line: #E8E1D5; --white: #FFFFFF; --radius: 10px;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--ink); background: var(--cream); line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--teal); }
+
+    header {
+      background: var(--cream); border-bottom: 1px solid var(--line);
+      padding: 16px 24px; display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo { color: var(--ink); font-size: 1.05rem; font-weight: 800; letter-spacing: -0.01em; }
+    .logo a { color: inherit; text-decoration: none; }
+    .logo span { color: var(--teal); }
+    .logo sub {
+      display: block; font-size: 0.6rem; font-weight: 600;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--ink-light); margin-top: -2px;
+    }
+    .header-right { display: flex; align-items: center; gap: 14px; }
+    .header-phone { color: var(--ink); font-weight: 700; font-size: 0.9rem; text-decoration: none; }
+    .call-link {
+      background: var(--teal); color: var(--cream); font-weight: 700; font-size: 0.85rem;
+      text-decoration: none; padding: 9px 18px; border-radius: var(--radius);
+    }
+    @media (max-width: 480px) { .header-phone { display: none; } }
+
+    .page-hero {
+      background: linear-gradient(165deg, var(--teal) 0%, var(--teal-dark) 100%);
+      color: var(--cream); padding: 64px 24px 72px; text-align: center;
+    }
+    .page-hero .eyebrow {
+      display: inline-block; font-size: 0.74rem; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--brass);
+      margin-bottom: 14px;
+    }
+    .page-hero h1 {
+      font-size: clamp(2rem, 4.5vw, 2.8rem); font-weight: 800;
+      letter-spacing: -0.025em; line-height: 1.15; max-width: 720px; margin: 0 auto 16px;
+    }
+    .page-hero p { color: rgba(250,247,242,0.78); font-size: 1.08rem; max-width: 600px; margin: 0 auto; }
+
+    .content { max-width: 760px; margin: 0 auto; padding: 64px 24px; }
+    .content h2 {
+      font-size: 1.55rem; font-weight: 800; letter-spacing: -0.02em;
+      margin: 48px 0 16px; color: var(--ink);
+    }
+    .content h2:first-child { margin-top: 0; }
+    .content h3 {
+      font-size: 1.1rem; font-weight: 700; margin: 28px 0 10px; color: var(--ink);
+    }
+    .content p { color: var(--ink-soft); margin-bottom: 16px; font-size: 1rem; }
+    .content ul { margin: 12px 0 18px 22px; color: var(--ink-soft); }
+    .content li { margin-bottom: 8px; font-size: 0.98rem; }
+
+    .step-block {
+      background: var(--white); border: 1.5px solid var(--line);
+      border-radius: var(--radius); padding: 28px; margin-bottom: 18px;
+      display: flex; gap: 22px; align-items: flex-start;
+    }
+    .step-block .num {
+      flex-shrink: 0; width: 48px; height: 48px; border-radius: 50%;
+      background: var(--teal); color: var(--cream);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 1.15rem;
+    }
+    .step-block h3 { margin: 0 0 8px; color: var(--ink); }
+    .step-block p { margin-bottom: 0; }
+
+    .callout {
+      background: var(--cream-warm); border: 1.5px solid var(--brass);
+      border-radius: var(--radius); padding: 24px 26px; margin: 28px 0;
+    }
+    .callout strong { color: var(--ink); font-weight: 700; }
+
+    .cta-block {
+      background: var(--teal); color: var(--cream); padding: 56px 24px;
+      text-align: center;
+    }
+    .cta-block h2 { color: var(--cream); font-size: 1.7rem; font-weight: 800; margin-bottom: 14px; }
+    .cta-block p { color: rgba(250,247,242,0.8); margin-bottom: 24px; }
+    .cta-block a {
+      display: inline-block; background: var(--brass); color: var(--ink);
+      padding: 14px 32px; border-radius: var(--radius); font-weight: 700;
+      text-decoration: none; font-size: 1rem;
+    }
+    .cta-block a:hover { background: var(--brass-dark); color: var(--cream); }
+
+    footer {
+      background: var(--ink); color: var(--ink-light); text-align: center;
+      padding: 32px 24px; font-size: 0.8rem; line-height: 1.85;
+    }
+    footer a { color: var(--cream); text-decoration: none; }
+    footer a:hover { color: var(--brass); }
+    .footer-links { margin-bottom: 8px; }
+    .footer-links a { margin: 0 10px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="/">West Michigan <span>Bath Audit</span></a>
+      <sub>Independent Bath Remodel Audits</sub>
+    </div>
+    <div class="header-right">
+      <a class="header-phone" href="tel:+16163259505">(616) 325-9505</a>
+      <a class="call-link" href="/#form">Get Free Audit</a>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <span class="eyebrow">The audit process</span>
+    <h1>How a West Michigan Bath Audit actually works.</h1>
+    <p>From the moment you submit the form to the day a specialist starts work &mdash; zero surprises, zero pressure.</p>
+  </section>
+
+  <main class="content">
+    <h2>The short version</h2>
+    <p>You submit a 60-second form. An independent auditor reviews your bath (in-person or by video). We benchmark your project against fair 2026 West Michigan pricing, hand you a written summary, and match you with one vetted specialist. You decide if you want to move forward. No upsell, no follow-up sales pressure, no obligation.</p>
+
+    <h2>The full process, step by step</h2>
+
+    <div class="step-block">
+      <div class="num">1</div>
+      <div>
+        <h3>You submit the form</h3>
+        <p>60 seconds. We need your zip, the current state of your bath, your name, and the best number to reach you. That&rsquo;s it. No long questionnaires, no project-budget interrogation up front.</p>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="num">2</div>
+      <div>
+        <h3>A real person reviews your submission within 24 hours</h3>
+        <p>Not a chatbot. Not a call center. A West Michigan team member reads what you sent and decides whether your project fits what we audit. If we can&rsquo;t help, we tell you that day and point you to who can.</p>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="num">3</div>
+      <div>
+        <h3>We schedule the walk-through</h3>
+        <p>You pick a time that works. In-home walk-throughs run about 30&ndash;45 minutes. Live video walk-throughs run about 20 minutes. Both result in the same written audit summary.</p>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="num">4</div>
+      <div>
+        <h3>The audit itself</h3>
+        <p>We look at your existing bath, measure what matters, review the materials you have, and discuss what you want changed. We ask about budget last &mdash; not first &mdash; because we want to tell you what your scope <em>should</em> cost before you tell us what you can spend.</p>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="num">5</div>
+      <div>
+        <h3>You get a written summary within 48 hours</h3>
+        <p>Your audit report includes: a fair-market price band for your scope based on 2026 West Michigan data, the materials and finishes worth specifying (and the ones not worth the upcharge), red flags to watch for in any quote you receive, and any safety or code issues we spotted.</p>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="num">6</div>
+      <div>
+        <h3>We match you with one vetted specialist</h3>
+        <p>Based on your scope, your geography, and the specialists currently available, we hand you off to one local installer. Not three. Not a bidding pool. One match with a real human contact &mdash; not a lead form on their site.</p>
+      </div>
+    </div>
+
+    <div class="step-block">
+      <div class="num">7</div>
+      <div>
+        <h3>You decide</h3>
+        <p>You read the specialist&rsquo;s quote against our audit summary. If the numbers line up and you trust the team, you move forward. If anything feels off, tell us &mdash; we&rsquo;ll pull the specialist and match you with the next one in our network. You never owe us anything.</p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <p><strong>What we don&rsquo;t do.</strong> We don&rsquo;t sell your information to call centers. We don&rsquo;t put you in a bidding war between three contractors. We don&rsquo;t collect a fee from you. And we don&rsquo;t follow up forever &mdash; if you say you&rsquo;re not moving forward, we&rsquo;ll check in once at 90 days and leave you alone after that.</p>
+    </div>
+
+    <h2>Why we match one specialist, not three</h2>
+    <p>The standard home-services lead model is to sell your form to three contractors who then race to call you first. It works for the lead broker. It doesn&rsquo;t work for you. You get three sales pitches in one afternoon, three follow-up calls the next day, and three weeks of email until somebody loses interest.</p>
+    <p>We do it the opposite way. The audit determines your scope and your fair price. Then we pick the one specialist in our network whose capacity, geography, and project type fit yours best. You get one quote, one phone call, one decision &mdash; or you walk away clean.</p>
+
+    <h2>Who pays for this?</h2>
+    <p>The audit is free for homeowners. Our network specialists pay a flat fee for the introductions we send them. Specialists are vetted on their work, their reviews, and their pricing transparency before they can pay to be in the network &mdash; not based on who pays more.</p>
+    <p>That matters because it removes the incentive that breaks most lead-gen services: we don&rsquo;t earn more when a specialist closes a bigger job, and we don&rsquo;t earn more when we send you to a more aggressive seller. Every match looks the same to us economically, so we focus on what makes the network last: matching well and keeping homeowners happy.</p>
+
+    <h2>What if I&rsquo;m not in West Michigan?</h2>
+    <p>We currently cover Grand Rapids metro, Holland, Grand Haven, Muskegon, Rockford, Forest Hills, Ada, Caledonia, Hudsonville, Zeeland, and the surrounding communities. If you submit a form from outside our service area, we&rsquo;ll let you know within 24 hours whether we can match you. We won&rsquo;t pretend we can serve you if we can&rsquo;t.</p>
+  </main>
+
+  <section class="cta-block">
+    <h2>Ready to start?</h2>
+    <p>The audit takes 60 seconds to request. A specialist will reach out within 24 hours.</p>
+    <a href="/#form">Book my free audit</a>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/process.html">How it works</a>
+      <a href="/cost-guide.html">Cost guide</a>
+      <a href="/financing.html">Financing</a>
+    </div>
+    <p>&copy; 2026 West Michigan Bath Audit &middot; Independent bath remodel audits</p>
+    <p>Grand Rapids, MI &nbsp;|&nbsp; <a href="tel:+16163259505">(616) 325-9505</a> &nbsp;|&nbsp; <a href="mailto:info@westmichiganbathaudit.com">info@westmichiganbathaudit.com</a></p>
+  </footer>
+</body>
+</html>
