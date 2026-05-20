@@ -1495,7 +1495,6 @@
       if (!form || !success) return;
       form.addEventListener('submit', function(e) {
         e.preventDefault();
-        if (typeof fbq !== 'undefined') fbq('track', 'Lead');
 
         const fd = new FormData(form);
         sessionStorage.setItem(LS.partialSent + ':' + formId, '1');
@@ -1508,6 +1507,7 @@
           headers: { 'Accept': 'application/json' }
         }).then(res => {
           if (res.ok) {
+            if (typeof fbq !== 'undefined') fbq('track', 'Lead');
             localStorage.removeItem(LS.formCache);
             form.style.display = 'none';
             success.style.display = 'block';
