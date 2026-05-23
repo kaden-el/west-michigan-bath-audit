@@ -6,7 +6,13 @@
   <title>2026 Grand Rapids Bath Remodel Cost Guide | West Michigan Bath Audit</title>
   <meta name="description" content="Real 2026 bathtub and shower remodel costs in Grand Rapids and West Michigan. Median prices, red flags to watch for, and 5 questions to ask any contractor before signing." />
   <link rel="canonical" href="https://www.westmichiganbathaudit.com/cost-guide.html" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231F4D5A'/%3E%3Cpath d='M16 36c0-3 2-5 5-5h22c3 0 5 2 5 5v6c0 3-2 5-5 5H21c-3 0-5-2-5-5z' fill='%23FAF7F2'/%3E%3Cpath d='M22 31V22c0-3 2-5 5-5h10c3 0 5 2 5 5v9' fill='none' stroke='%23FAF7F2' stroke-width='2.5'/%3E%3C/svg%3E" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='5' fill='%231F4D5A'/><g transform='translate(16,16)'><circle r='10' fill='none' stroke='%23FAF7F2' stroke-width='1.6'/><line x1='-6.5' y1='0' x2='6.5' y2='0' stroke='%23FAF7F2' stroke-width='1.6' stroke-linecap='round'/><circle cx='4.5' cy='-4.5' r='1.6' fill='%23D4B584'/></g></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=Manrope:wght@200..800&family=JetBrains+Mono:wght@300..600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/wba-brand.css" />
 
   <!-- META PIXEL -->
   <script>
@@ -21,139 +27,303 @@
   </script>
 
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --teal: #1F4D5A; --teal-dark: #163844;
-      --cream: #FAF7F2; --cream-warm: #F4EFE5;
-      --brass: #B08D57; --brass-dark: #8E7144;
-      --ink: #1A1A1A; --ink-soft: #4A4A4A; --ink-light: #7A7A7A;
-      --line: #E8E1D5; --white: #FFFFFF; --radius: 10px;
+    .page-hero {
+      background: var(--teal);
+      color: var(--cream);
+      padding: 88px var(--pad-x);
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--rule);
     }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      color: var(--ink); background: var(--cream); line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      width: 480px; height: 480px;
+      background: radial-gradient(circle at 50% 50%, rgba(212,181,132,0.07) 0%, transparent 60%);
+      transform: translate(35%, -35%);
+      pointer-events: none;
     }
-    a { color: var(--teal); }
-    header {
-      background: var(--cream); border-bottom: 1px solid var(--line);
-      padding: 16px 24px; display: flex; align-items: center; justify-content: space-between;
+    .page-hero .wrap { position: relative; }
+    .page-hero .eyebrow { color: var(--brass-light); margin-bottom: 24px; }
+    .page-hero .eyebrow::before { background: var(--brass-light); }
+    .page-hero h1 { color: var(--cream); max-width: 880px; margin-bottom: 24px; }
+    .page-hero h1 em { color: var(--brass-light); font-style: italic; }
+    .page-hero .lede { color: rgba(250,247,242,0.82); max-width: 680px; }
+    .page-hero .meta-row {
+      margin-top: 32px;
+      display: inline-flex;
+      gap: 28px;
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(212, 181, 132, 0.9);
     }
-    .logo {
-      color: var(--ink); font-size: 1.05rem; font-weight: 800;
-      text-decoration: none; letter-spacing: -0.01em;
+    .page-hero .meta-row span { color: rgba(250,247,242,0.5); margin-right: 12px; }
+
+    .content {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 88px var(--pad-x) 80px;
     }
-    .logo span { color: var(--teal); }
-    .back-link {
-      color: var(--ink); font-size: 0.85rem; font-weight: 700; text-decoration: none;
+    .content h2 {
+      font-family: var(--serif);
+      color: var(--teal);
+      font-size: clamp(24px, 3vw, 34px);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin: 64px 0 22px;
+      font-variation-settings: 'opsz' 72, 'SOFT' 40;
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
     }
-    .back-link:hover { color: var(--teal); }
-    main {
-      max-width: 760px; margin: 0 auto; padding: 56px 24px 72px;
+    .content h2 em { font-style: italic; color: var(--brass); font-variation-settings: 'opsz' 72, 'SOFT' 90; }
+    .content h2:first-child { margin-top: 0; }
+    .content h2 .num {
+      font-family: var(--mono);
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      color: var(--brass);
+      text-transform: uppercase;
+      flex-shrink: 0;
+      padding-top: 4px;
     }
-    .meta-row {
-      font-size: 0.74rem; color: var(--ink-light);
-      text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 16px;
+    .content p { color: var(--ink-soft); margin-bottom: 18px; font-size: 15.5px; line-height: 1.75; }
+    .content p a { color: var(--teal); border-bottom: 1px solid var(--brass); padding-bottom: 1px; text-decoration: none; }
+    .content ul, .content ol { margin: 14px 0 22px 0; color: var(--ink-soft); padding-left: 0; list-style: none; counter-reset: olist; }
+    .content ul li, .content ol li {
+      padding-left: 28px;
+      position: relative;
+      margin-bottom: 12px;
+      font-size: 15px;
+      line-height: 1.7;
     }
-    h1 {
-      font-size: clamp(1.8rem, 4.2vw, 2.5rem); font-weight: 800;
-      letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 16px; color: var(--ink);
+    .content ul li::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--brass);
+      border-radius: 50%;
+      position: absolute;
+      left: 0; top: 11px;
     }
-    .lede {
-      font-size: 1.08rem; color: var(--ink-soft); margin-bottom: 40px;
+    .content ol li {
+      counter-increment: olist;
+      padding-left: 36px;
     }
-    h2 {
-      font-size: 1.45rem; font-weight: 800; letter-spacing: -0.02em;
-      margin-top: 48px; margin-bottom: 16px; padding-bottom: 10px;
-      border-bottom: 2px solid var(--brass); color: var(--ink);
+    .content ol li::before {
+      content: counter(olist, decimal-leading-zero);
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      color: var(--brass);
+      position: absolute;
+      left: 0; top: 4px;
     }
-    h3 {
-      font-size: 1.05rem; font-weight: 700; margin-top: 26px; margin-bottom: 9px; color: var(--ink);
-    }
-    p { margin-bottom: 15px; color: var(--ink-soft); }
-    ul, ol { margin-left: 1.4em; margin-bottom: 18px; color: var(--ink-soft); }
-    li { margin-bottom: 7px; }
+    .content li strong { color: var(--ink); font-weight: 500; }
+
     .cost-table {
-      width: 100%; border-collapse: collapse; margin: 20px 0 30px;
-      font-size: 0.92rem; background: var(--white);
-      border: 1.5px solid var(--line); border-radius: var(--radius); overflow: hidden;
-    }
-    .cost-table th, .cost-table td {
-      padding: 13px 16px; text-align: left; border-bottom: 1px solid var(--line);
+      width: 100%;
+      border-collapse: collapse;
+      margin: 28px 0 36px;
+      font-family: var(--sans);
+      font-size: 14px;
+      background: var(--cream);
+      border: 1px solid var(--rule);
     }
     .cost-table th {
-      background: var(--cream-warm); font-weight: 700; font-size: 0.78rem;
-      text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink);
+      background: var(--cream-warm);
+      font-family: var(--mono);
+      font-weight: 400;
+      font-size: 10.5px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      padding: 14px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--rule);
+    }
+    .cost-table td {
+      padding: 16px;
+      vertical-align: top;
+      border-bottom: 1px solid var(--rule);
+      line-height: 1.55;
     }
     .cost-table tr:last-child td { border-bottom: none; }
-    .cost-table td:first-child { color: var(--ink); font-weight: 700; }
+    .cost-table td:first-child {
+      font-family: var(--serif);
+      font-size: 17px;
+      font-weight: 400;
+      color: var(--ink);
+      font-variation-settings: 'opsz' 36, 'SOFT' 40;
+      white-space: nowrap;
+    }
+    .cost-table td:nth-child(2) { color: var(--ink-soft); font-size: 14px; }
     .cost-table td:last-child {
-      font-weight: 700; color: var(--teal); white-space: nowrap;
+      font-family: var(--mono);
+      color: var(--teal);
+      font-weight: 500;
+      white-space: nowrap;
+      font-size: 13.5px;
     }
+    @media (max-width: 640px) {
+      .cost-table { font-size: 13px; }
+      .cost-table th, .cost-table td { padding: 12px 10px; }
+      .cost-table td:first-child { font-size: 14px; }
+    }
+
     .callout {
-      background: var(--cream-warm); border-left: 4px solid var(--brass);
-      padding: 18px 24px; border-radius: 0 var(--radius) var(--radius) 0; margin: 24px 0;
+      background: var(--cream-warm);
+      border: 1px solid var(--brass);
+      padding: 28px 32px;
+      margin: 36px 0;
+      position: relative;
     }
-    .callout strong { color: var(--ink); font-weight: 700; }
+    .callout::before, .callout::after {
+      content: '';
+      position: absolute;
+      width: 18px; height: 1px;
+      background: var(--brass);
+    }
+    .callout::before { top: -1px; left: -1px; }
+    .callout::after { bottom: -1px; right: -1px; }
+    .callout p { margin-bottom: 0; color: var(--ink-soft); }
+    .callout strong {
+      color: var(--ink);
+      font-style: italic;
+      font-weight: 500;
+      font-family: var(--serif);
+      font-size: 17px;
+      font-variation-settings: 'opsz' 24, 'SOFT' 80;
+    }
+
     .red-flag {
-      background: var(--white); border: 1.5px solid var(--line);
-      border-radius: var(--radius); padding: 18px 22px; margin-bottom: 14px;
+      border: 1px solid var(--rule);
+      padding: 24px 28px;
+      margin-bottom: 14px;
+      background: var(--cream);
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      gap: 24px;
+      align-items: start;
     }
-    .red-flag strong {
-      display: block; color: var(--brass-dark);
-      font-size: 0.74rem; letter-spacing: 0.14em;
-      text-transform: uppercase; margin-bottom: 8px; font-weight: 700;
+    .red-flag .tag {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--brass);
+      padding-top: 3px;
     }
-    .cta-card {
-      background: var(--teal); color: var(--cream);
-      border-radius: 14px; padding: 40px 30px;
-      margin-top: 52px; text-align: center;
+    .red-flag p {
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: 15px;
+      line-height: 1.7;
     }
-    .cta-card h2 {
-      color: var(--cream); border: none; margin: 0 0 14px;
-      font-size: 1.45rem;
+    @media (max-width: 600px) {
+      .red-flag { grid-template-columns: 1fr; gap: 8px; padding: 18px 22px; }
     }
-    .cta-card p {
-      color: rgba(250,247,242,0.82); margin-bottom: 26px;
-      max-width: 480px; margin-left: auto; margin-right: auto;
+
+    .cta-block {
+      background: var(--teal);
+      color: var(--cream);
+      padding: 88px var(--pad-x);
+      text-align: center;
+      border-top: 1px solid var(--rule);
     }
-    .cta-btn {
-      display: inline-block; background: var(--brass); color: var(--ink);
-      font-weight: 700; font-size: 1rem; text-decoration: none;
-      padding: 14px 30px; border-radius: var(--radius);
-      transition: background 0.15s;
+    .cta-block .eyebrow { color: var(--brass-light); margin-bottom: 22px; justify-content: center; display: inline-flex; }
+    .cta-block .eyebrow::before { background: var(--brass-light); }
+    .cta-block h2 { color: var(--cream); max-width: 640px; margin: 0 auto 16px; }
+    .cta-block h2 em { color: var(--brass-light); font-style: italic; }
+    .cta-block p {
+      color: rgba(250,247,242,0.78);
+      margin: 0 auto 32px;
+      max-width: 540px;
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 1.55;
+      font-variation-settings: 'opsz' 36, 'SOFT' 20;
     }
-    .cta-btn:hover { background: var(--brass-dark); color: var(--cream); }
-    footer {
-      background: var(--ink); color: var(--ink-light);
-      text-align: center; padding: 32px 24px;
-      font-size: 0.8rem; line-height: 1.85;
+    .cta-block a.btn {
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--teal);
+      background: var(--cream);
+      border: 1px solid var(--cream);
+      padding: 16px 28px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      transition: background 0.25s, color 0.25s;
     }
-    footer a { color: var(--cream); text-decoration: none; }
-    footer a:hover { color: var(--brass); }
-    .footer-links { margin-bottom: 8px; }
-    .footer-links a { margin: 0 10px; }
+    .cta-block a.btn::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--brass);
+      border-radius: 50%;
+    }
+    .cta-block a.btn:hover { background: var(--brass-light); border-color: var(--brass-light); color: var(--teal-deep); }
+
     @media print {
-      header, footer, .cta-card { display: none; }
-      main { padding: 12px; }
+      header, footer, .cta-block, .page-hero::before { display: none; }
+      .page-hero { padding: 24px; background: var(--cream); color: var(--ink); }
+      .page-hero h1, .page-hero .lede, .page-hero .eyebrow { color: var(--ink); }
+      .content { padding: 24px; }
       h2 { page-break-after: avoid; }
       .cost-table, .red-flag, .callout { page-break-inside: avoid; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <a href="/" class="logo">West Michigan <span>Bath Audit</span></a>
-    <a href="/" class="back-link">&larr; Back to home</a>
+
+  <header class="site">
+    <div class="row">
+      <a class="site-logo" href="/" aria-label="West Michigan Bath Audit">
+        <svg viewBox="0 0 620 110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <g transform="translate(50, 55)">
+            <circle class="wba-mark-stroke" cx="0" cy="0" r="30" fill="none" stroke="#1F4D5A" stroke-width="2"/>
+            <line class="wba-mark-stroke" x1="-20" y1="0" x2="20" y2="0" stroke="#1F4D5A" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="13" cy="-13" r="3" fill="#B08D57"/>
+          </g>
+          <line x1="105" y1="28" x2="105" y2="82" stroke="#B08D57" stroke-width="1" opacity="0.55"/>
+          <text x="125" y="58" font-family="Fraunces, serif" font-weight="400" font-size="38" fill="#1F4D5A" letter-spacing="-0.02em" style="font-variation-settings: 'opsz' 96, 'SOFT' 40;">WBA<tspan fill="#B08D57">.</tspan></text>
+          <text x="125" y="80" font-family="Manrope, sans-serif" font-weight="300" font-size="9" fill="#1A1A1A" letter-spacing="0.42em">WEST · MICHIGAN · BATH · AUDIT</text>
+        </svg>
+      </a>
+      <nav class="site-nav">
+        <a class="nav-link" href="/process.html">Process</a>
+        <a class="nav-link" href="/financing.html">Financing</a>
+        <a class="tel" href="tel:+16163259505">(616) 325-9505</a>
+        <a class="call-link" href="/#form">Get matched</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <p class="meta-row">2026 Cost Guide &nbsp;&middot;&nbsp; Updated May 2026 &nbsp;&middot;&nbsp; Grand Rapids Metro</p>
-    <h1>What a bath remodel actually costs in West Michigan in 2026.</h1>
-    <p class="lede">No fluff, no sales pitch. Here are the median prices West Michigan homeowners are paying this year, what each line item should cover, and the five red flags that signal you&rsquo;re being overcharged.</p>
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="eyebrow">2026 Cost Guide</p>
+      <h1>What a bath remodel <em>actually</em> costs in West Michigan in 2026.</h1>
+      <p class="lede">No fluff, no sales pitch. Median prices West Michigan homeowners are paying this year, what each line item should cover, and the five red flags that signal you&rsquo;re being overcharged.</p>
+      <div class="meta-row">
+        <div><span>Updated</span>May 2026</div>
+        <div><span>Region</span>Grand Rapids Metro</div>
+        <div><span>Source</span>Network quote data</div>
+      </div>
+    </div>
+  </section>
 
-    <h2>The real numbers</h2>
-    <p>These are median 2026 installed prices for the Grand Rapids metro, sourced from quotes our network has reviewed and benchmarked against HomeAdvisor and Angi data for ZIP codes 49503&ndash;49546.</p>
+  <main class="content">
+
+    <h2><span class="num">01</span>The real <em>numbers</em></h2>
+    <p>These are median 2026 installed prices for the Grand Rapids metro, aggregated from quotes our network contractors deliver and benchmarked against HomeAdvisor and Angi data for ZIP codes 49503–49546.</p>
 
     <table class="cost-table">
       <thead>
@@ -167,113 +337,137 @@
         <tr>
           <td>Tub-to-shower conversion</td>
           <td>Remove tub, install acrylic walk-in shower with low-threshold base, slip-resistant floor, one set of walls</td>
-          <td>$6,500&ndash;$11,000</td>
+          <td>$6,500–$11,000</td>
         </tr>
         <tr>
           <td>Acrylic tub liner</td>
           <td>Custom-molded liner installed over your current tub + 3-wall surround</td>
-          <td>$3,800&ndash;$6,500</td>
+          <td>$3,800–$6,500</td>
         </tr>
         <tr>
           <td>Full tub replacement</td>
           <td>Remove old tub, install new alcove tub, surround, plumbing, faucet</td>
-          <td>$5,200&ndash;$9,000</td>
+          <td>$5,200–$9,000</td>
         </tr>
         <tr>
           <td>Walk-in shower (senior safety)</td>
           <td>Zero-threshold entry, grab bars, built-in bench, slip-resistant floor</td>
-          <td>$8,500&ndash;$14,500</td>
+          <td>$8,500–$14,500</td>
         </tr>
         <tr>
           <td>Full bathroom remodel</td>
           <td>Bath/shower + vanity + flooring + paint + fixtures (no layout change)</td>
-          <td>$14,000&ndash;$28,000</td>
+          <td>$14,000–$28,000</td>
         </tr>
       </tbody>
     </table>
 
     <div class="callout">
-      <strong>One-day install caveat.</strong> &ldquo;One-day&rdquo; pricing is legitimate for standard acrylic tub-to-shower swaps. If a contractor quotes one-day for a custom-tile walk-in or anything involving moving plumbing, walk away &mdash; that&rsquo;s a one-day demo, not a one-day install.
+      <p><strong>One-day install caveat.</strong> &ldquo;One-day&rdquo; pricing is legitimate for standard acrylic tub-to-shower swaps. If a contractor quotes one-day for a custom-tile walk-in or anything involving moving plumbing, walk away — that&rsquo;s a one-day demo, not a one-day install.</p>
     </div>
 
-    <h2>5 red flags when getting bath remodel quotes</h2>
+    <h2><span class="num">02</span>Five <em>red flags</em> when getting bath remodel quotes</h2>
 
     <div class="red-flag">
-      <strong>Red flag 1</strong>
-      The price drops $2,000+ if you &ldquo;sign today.&rdquo; Real contractors price the job, not the customer&rsquo;s mood. A drop that big means the first number was inflated.
-    </div>
-
-    <div class="red-flag">
-      <strong>Red flag 2</strong>
-      They won&rsquo;t break out labor vs. materials on the quote. Every honest installer will itemize. &ldquo;All-in&rdquo; lump sums hide where the margin is.
+      <div class="tag">Red flag · 01</div>
+      <p>The price drops $2,000+ if you &ldquo;sign today.&rdquo; Real contractors price the job, not the customer&rsquo;s mood. A drop that big means the first number was inflated.</p>
     </div>
 
     <div class="red-flag">
-      <strong>Red flag 3</strong>
-      &ldquo;Lifetime warranty&rdquo; with no written terms. Lifetime on what &mdash; the acrylic, the install, the caulk? Get the warranty in writing before you pay a deposit. Most &ldquo;lifetime&rdquo; warranties are on the acrylic only, which almost never fails anyway.
+      <div class="tag">Red flag · 02</div>
+      <p>They won&rsquo;t break out labor vs. materials on the quote. Every honest installer will itemize. &ldquo;All-in&rdquo; lump sums hide where the margin is.</p>
     </div>
 
     <div class="red-flag">
-      <strong>Red flag 4</strong>
-      A deposit over 30% before any work begins. Michigan custom requires 10&ndash;30% for material order. More than that is a financing red flag &mdash; you&rsquo;re funding their other jobs.
+      <div class="tag">Red flag · 03</div>
+      <p>&ldquo;Lifetime warranty&rdquo; with no written terms. Lifetime on what — the acrylic, the install, the caulk? Get the warranty in writing before you pay a deposit. Most &ldquo;lifetime&rdquo; warranties are on the acrylic only, which almost never fails anyway.</p>
     </div>
 
     <div class="red-flag">
-      <strong>Red flag 5</strong>
-      The &ldquo;senior safety upgrade&rdquo; is priced as an add-on at $3,000+. Grab bars and slip-resistant flooring add real cost in materials of maybe $400. Anything over that is margin padding.
+      <div class="tag">Red flag · 04</div>
+      <p>A deposit over 30% before any work begins. Michigan custom requires 10–30% for material order. More than that is a financing red flag — you&rsquo;re funding their other jobs.</p>
     </div>
 
-    <h2>5 questions to ask every contractor before signing</h2>
+    <div class="red-flag">
+      <div class="tag">Red flag · 05</div>
+      <p>The &ldquo;senior safety upgrade&rdquo; is priced as an add-on at $3,000+. Grab bars and slip-resistant flooring add real cost in materials of maybe $400. Anything over that is margin padding.</p>
+    </div>
+
+    <h2><span class="num">03</span>Five questions to ask <em>every</em> contractor before signing</h2>
 
     <ol>
-      <li><strong>&ldquo;Who is doing the install &mdash; your crew or a subcontractor?&rdquo;</strong> If subbed, ask for the sub&rsquo;s name and certifications. Plenty of one-day install companies use rotating subs you&rsquo;ll never meet again.</li>
-      <li><strong>&ldquo;What&rsquo;s the exact acrylic gauge?&rdquo;</strong> 1/8&Prime; minimum. Anything thinner cracks within 5 years.</li>
-      <li><strong>&ldquo;Is the floor base structural or cosmetic?&rdquo;</strong> Structural bases (mortar-set) hold up. Drop-in cosmetic bases flex and crack at the drain.</li>
-      <li><strong>&ldquo;What happens if you cut into the wall and find rot or mold?&rdquo;</strong> The answer should be a written change-order process with a per-square-foot rate. &ldquo;We&rsquo;ll just handle it&rdquo; means a surprise invoice.</li>
-      <li><strong>&ldquo;Can I see three local installs from the last 90 days?&rdquo;</strong> Not a slideshow &mdash; actual addresses or homeowner references in West Michigan. If they can&rsquo;t produce three recent local jobs, they&rsquo;re not the right fit.</li>
+      <li><strong>Who is doing the install — your crew or a subcontractor?</strong> If subbed, ask for the sub&rsquo;s name and certifications. Plenty of one-day install companies use rotating subs you&rsquo;ll never meet again.</li>
+      <li><strong>What&rsquo;s the exact acrylic gauge?</strong> 1/8″ minimum. Anything thinner cracks within 5 years.</li>
+      <li><strong>Is the floor base structural or cosmetic?</strong> Structural bases (mortar-set) hold up. Drop-in cosmetic bases flex and crack at the drain.</li>
+      <li><strong>What happens if you cut into the wall and find rot or mold?</strong> The answer should be a written change-order process with a per-square-foot rate. &ldquo;We&rsquo;ll just handle it&rdquo; means a surprise invoice.</li>
+      <li><strong>Can I see three local installs from the last 90 days?</strong> Not a slideshow — actual addresses or homeowner references in West Michigan. If they can&rsquo;t produce three recent local jobs, they&rsquo;re not the right fit.</li>
     </ol>
 
-    <h2>Senior safety: what you actually need</h2>
-    <p>If you&rsquo;re aging in place or remodeling for a parent, the must-haves &mdash; in order of fall-prevention value:</p>
+    <h2><span class="num">04</span>Senior safety: <em>what you actually need</em></h2>
+    <p>If you&rsquo;re aging in place or remodeling for a parent, the must-haves — in order of fall-prevention value:</p>
     <ul>
-      <li><strong>Low or zero-threshold entry</strong> &mdash; eliminates the #1 cause of bathroom falls.</li>
-      <li><strong>Slip-resistant textured floor</strong> &mdash; not just a mat. Built into the base.</li>
-      <li><strong>Grab bars at the entry and seat</strong> &mdash; rated to 250 lbs minimum, anchored to studs.</li>
-      <li><strong>Built-in bench</strong> &mdash; mortared bench, not a portable seat that shifts.</li>
-      <li><strong>Handheld showerhead on a slide bar</strong> &mdash; allows seated bathing.</li>
+      <li><strong>Low or zero-threshold entry</strong> — eliminates the #1 cause of bathroom falls.</li>
+      <li><strong>Slip-resistant textured floor</strong> — not just a mat. Built into the base.</li>
+      <li><strong>Grab bars at the entry and seat</strong> — rated to 250 lbs minimum, anchored to studs.</li>
+      <li><strong>Built-in bench</strong> — mortared bench, not a portable seat that shifts.</li>
+      <li><strong>Handheld showerhead on a slide bar</strong> — allows seated bathing.</li>
     </ul>
     <p>None of these should add more than $1,500 total to a standard tub-to-shower conversion. If they&rsquo;re priced higher, you&rsquo;re being upsold.</p>
 
-    <h2>Financing: the quiet cost</h2>
-    <p>Many one-day bath companies push 0% financing for 12&ndash;24 months. Real numbers:</p>
+    <h2><span class="num">05</span>Financing: <em>the quiet cost</em></h2>
+    <p>Many one-day bath companies push 0% financing for 12–24 months. Real numbers:</p>
     <ul>
-      <li>0% financing is real, but the contractor typically pays the financing company a 6&ndash;10% kickback &mdash; <strong>which is built into your quote</strong>.</li>
-      <li>Ask: &ldquo;What&rsquo;s the cash price?&rdquo; The answer should be 5&ndash;8% lower than the financed price.</li>
+      <li>0% financing is real, but the contractor typically pays the financing company a 6–10% kickback — <strong>which is built into your quote</strong>.</li>
+      <li>Ask: &ldquo;What&rsquo;s the cash price?&rdquo; The answer should be 5–8% lower than the financed price.</li>
       <li>If they refuse to discount for cash, you&rsquo;re paying for financing whether or not you use it.</li>
     </ul>
     <p>Our full <a href="/financing.html">financing breakdown</a> covers monthly payments at common project sizes, the four main lender paths, and the five questions to ask before signing any financing offer.</p>
 
     <div class="callout">
-      <strong>Bottom line.</strong> A fair 2026 Grand Rapids tub-to-shower conversion should land between $7,000 and $10,000 cash. A senior-safety walk-in should land between $9,000 and $13,500. If you&rsquo;re quoted more than 20% above these ranges, get a second quote.
-    </div>
-
-    <div class="cta-card">
-      <h2>Want a second opinion on your quote?</h2>
-      <p>We&rsquo;ll audit your project against fair 2026 West Michigan pricing and connect you with up to three verified local contractors who quote against the same scope. Free. No high-pressure pitch.</p>
-      <a href="/#form" class="cta-btn">Book my free audit &rarr;</a>
+      <p><strong>Bottom line.</strong> A fair 2026 Grand Rapids tub-to-shower conversion should land between $7,000 and $10,000 cash. A senior-safety walk-in should land between $9,000 and $13,500. If you&rsquo;re quoted more than 20% above these ranges, get a second quote.</p>
     </div>
   </main>
 
-  <footer>
-    <div class="footer-links">
-      <a href="/">Home</a>
-      <a href="/process.html">How it works</a>
-      <a href="/cost-guide.html">Cost guide</a>
-      <a href="/financing.html">Financing</a>
-      <a href="/privacy-policy.html">Privacy</a>
+  <section class="cta-block">
+    <p class="eyebrow">Compare your quote</p>
+    <h2>Want to see what <em>two more</em> contractors would charge?</h2>
+    <p>Get up to three quotes from vetted West Michigan bath contractors. Compare them against your existing quote and the ranges above. Free for homeowners.</p>
+    <a href="/#form" class="btn">Match me with contractors</a>
+  </section>
+
+  <footer class="site">
+    <div class="row">
+      <div class="mark">
+        <svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" aria-label="WBA — West Michigan Bath Audit">
+          <g transform="translate(360, 80)">
+            <circle cx="0" cy="0" r="52" fill="none" stroke="#FAF7F2" stroke-width="2.4"/>
+            <line x1="-36" y1="0" x2="36" y2="0" stroke="#FAF7F2" stroke-width="2.4" stroke-linecap="round"/>
+            <circle cx="24" cy="-24" r="4.4" fill="#D4B584"/>
+          </g>
+          <text x="360" y="220" text-anchor="middle" font-family="Fraunces, serif" font-weight="400" font-size="88" fill="#FAF7F2" letter-spacing="-0.02em" style="font-variation-settings: 'opsz' 144, 'SOFT' 40;">WBA<tspan fill="#D4B584">.</tspan></text>
+          <line x1="280" y1="244" x2="440" y2="244" stroke="#D4B584" stroke-width="1.2" opacity="0.75"/>
+          <text x="360" y="278" text-anchor="middle" font-family="Manrope, sans-serif" font-weight="300" font-size="13" fill="#FAF7F2" letter-spacing="0.42em">WEST · MICHIGAN · BATH · AUDIT</text>
+        </svg>
+      </div>
+      <div class="col-r">
+        <div class="nav">
+          <a href="/">Home</a>
+          <a href="/process.html">How it works</a>
+          <a href="/cost-guide.html">2026 cost guide</a>
+          <a href="/financing.html">Financing</a>
+          <a href="/privacy-policy.html">Privacy</a>
+        </div>
+        <div class="info">
+          Grand Rapids, MI<br/>
+          <a href="tel:+16163259505">(616) 325-9505</a><br/>
+          <a href="mailto:info@westmichiganbathaudit.com">info@westmichiganbathaudit.com</a>
+        </div>
+      </div>
+      <p class="fine">
+        &copy; 2026 West Michigan Bath Audit <span class="brass">·</span> A local contractor-matching service for West Michigan homeowners. <span class="brass">·</span> Free for homeowners. Funded by the contractor network.
+      </p>
     </div>
-    <p>&copy; 2026 West Michigan Bath Audit &middot; Independent bath remodel audits</p>
-    <p>Grand Rapids, MI &nbsp;|&nbsp; <a href="tel:+16163259505">(616) 325-9505</a> &nbsp;|&nbsp; <a href="mailto:info@westmichiganbathaudit.com">info@westmichiganbathaudit.com</a></p>
   </footer>
+
 </body>
 </html>

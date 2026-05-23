@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>West Michigan Bath Audit | Free, Independent Bath Remodel Audit</title>
-  <meta name="description" content="An independent West Michigan bath audit. Free in-home walk-through, fair-cost benchmarks, and a vetted-contractor match — without the high-pressure pitch." />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231F4D5A'/%3E%3Cpath d='M16 36c0-3 2-5 5-5h22c3 0 5 2 5 5v6c0 3-2 5-5 5H21c-3 0-5-2-5-5z' fill='%23FAF7F2'/%3E%3Cpath d='M22 31V22c0-3 2-5 5-5h10c3 0 5 2 5 5v9' fill='none' stroke='%23FAF7F2' stroke-width='2.5'/%3E%3C/svg%3E" />
+  <title>West Michigan Bath Audit | Free Contractor Match for Bath Remodels</title>
+  <meta name="description" content="Free West Michigan bath contractor match. Submit one form, get up to three quotes from vetted local bath specialists. No third-party lead aggregators, no high-pressure pitch." />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='5' fill='%231F4D5A'/><g transform='translate(16,16)'><circle r='10' fill='none' stroke='%23FAF7F2' stroke-width='1.6'/><line x1='-6.5' y1='0' x2='6.5' y2='0' stroke='%23FAF7F2' stroke-width='1.6' stroke-linecap='round'/><circle cx='4.5' cy='-4.5' r='1.6' fill='%23D4B584'/></g></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=Manrope:wght@200..800&family=JetBrains+Mono:wght@300..600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/wba-brand.css" />
 
   <!-- META PIXEL -->
   <script>
@@ -21,848 +27,765 @@
     src="https://www.facebook.com/tr?id=2047039182913124&ev=PageView&noscript=1"/></noscript>
 
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --teal: #1F4D5A;
-      --teal-dark: #163844;
-      --teal-soft: #2A6577;
-      --cream: #FAF7F2;
-      --cream-warm: #F4EFE5;
-      --brass: #B08D57;
-      --brass-dark: #8E7144;
-      --ink: #1A1A1A;
-      --ink-soft: #4A4A4A;
-      --ink-light: #7A7A7A;
-      --line: #E8E1D5;
-      --white: #FFFFFF;
-      --radius: 10px;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      color: var(--ink);
-      background: var(--cream);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a { color: var(--teal); }
-
-    /* ── ALERT BAR ── */
-    .alert-bar {
-      background: var(--teal);
-      color: var(--cream);
-      text-align: center;
-      padding: 9px 16px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-    }
-    .alert-bar span { opacity: 0.85; font-weight: 400; }
-
-    /* ── HEADER ── */
-    header {
-      background: var(--cream);
-      border-bottom: 1px solid var(--line);
-      padding: 16px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .logo {
-      color: var(--ink);
-      font-size: 1.05rem;
-      font-weight: 800;
-      letter-spacing: -0.01em;
-    }
-    .logo span { color: var(--teal); }
-    .logo sub {
-      display: block;
-      font-size: 0.6rem;
-      font-weight: 600;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--ink-light);
-      margin-top: -2px;
-    }
-    .header-right {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-    .header-phone {
-      color: var(--ink);
-      font-weight: 700;
-      font-size: 0.9rem;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-    .header-phone:hover { color: var(--teal); }
-    header a.call-link {
-      background: var(--teal);
-      color: var(--cream);
-      font-weight: 700;
-      font-size: 0.85rem;
-      text-decoration: none;
-      padding: 9px 18px;
-      border-radius: var(--radius);
-      white-space: nowrap;
-      transition: background 0.15s;
-    }
-    header a.call-link:hover { background: var(--teal-dark); }
-    @media (max-width: 480px) {
-      .header-phone { display: none; }
-    }
-
-    /* ── HERO ── */
     .hero {
-      background: linear-gradient(165deg, var(--teal) 0%, var(--teal-dark) 100%);
+      background: var(--teal);
       color: var(--cream);
-      padding: 64px 24px 72px;
+      padding: 96px var(--pad-x) 96px;
       position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--rule);
     }
     .hero::before {
       content: '';
       position: absolute;
-      inset: 0;
-      background-image: radial-gradient(circle at 20% 20%, rgba(176,141,87,0.08) 0%, transparent 50%);
+      top: 0; right: 0;
+      width: 520px; height: 520px;
+      background: radial-gradient(circle at 50% 50%, rgba(212,181,132,0.08) 0%, transparent 60%);
+      transform: translate(35%, -35%);
       pointer-events: none;
     }
     .hero-inner {
-      max-width: 1140px;
+      max-width: var(--max);
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 1fr 440px;
-      gap: 56px;
-      align-items: center;
+      grid-template-columns: 1fr 420px;
+      gap: 72px;
+      align-items: start;
       position: relative;
     }
-    @media (max-width: 880px) {
-      .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+    @media (max-width: 920px) {
+      .hero { padding: 64px var(--pad-x) 72px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 48px; }
     }
-    .hero-left { text-align: left; }
-    @media (max-width: 880px) {
-      .hero-left { text-align: center; }
-    }
-    .hero .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      background: rgba(176,141,87,0.18);
-      border: 1px solid rgba(176,141,87,0.5);
-      color: var(--brass);
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      padding: 6px 14px;
-      border-radius: 100px;
-      margin-bottom: 22px;
-    }
-    .badge-dot {
-      width: 6px; height: 6px;
-      background: var(--brass);
-      border-radius: 50%;
-      animation: pulse 1.6s infinite;
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(1.3); }
-    }
-    .hero h1 {
-      font-size: clamp(1.85rem, 4.2vw, 2.8rem);
-      font-weight: 800;
-      line-height: 1.12;
-      margin-bottom: 18px;
-      letter-spacing: -0.025em;
-      color: var(--cream);
-    }
-    .hero h1 em {
-      font-style: normal;
-      color: var(--brass);
-      font-weight: 800;
-    }
+    .hero-left { padding-top: 12px; }
+    .hero .eyebrow { color: var(--brass-light); margin-bottom: 22px; }
+    .hero .eyebrow::before { background: var(--brass-light); opacity: 0.7; }
+    .hero h1 { color: var(--cream); margin-bottom: 28px; }
+    .hero h1 em { color: var(--brass-light); font-style: italic; }
     .hero-desc {
-      font-size: 1.05rem;
-      color: rgba(250,247,242,0.78);
-      margin-bottom: 22px;
-      max-width: 500px;
-      line-height: 1.6;
-    }
-    @media (max-width: 880px) {
-      .hero-desc { margin-left: auto; margin-right: auto; }
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: clamp(17px, 1.6vw, 20px);
+      line-height: 1.55;
+      color: rgba(250, 247, 242, 0.82);
+      max-width: 540px;
+      margin-bottom: 36px;
+      font-variation-settings: 'opsz' 36, 'SOFT' 20;
     }
     .hero-bullets {
       list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 9px;
-    }
-    @media (max-width: 880px) {
-      .hero-bullets { align-items: center; }
+      display: grid;
+      gap: 14px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(212, 181, 132, 0.3);
     }
     .hero-bullets li {
-      font-size: 0.92rem;
-      color: rgba(250,247,242,0.72);
-      display: flex;
-      align-items: center;
-      gap: 9px;
+      font-family: var(--sans);
+      font-size: 14.5px;
+      color: rgba(250, 247, 242, 0.9);
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 18px;
+      align-items: baseline;
     }
-    .hero-bullets li::before {
-      content: '✓';
-      color: var(--brass);
-      font-weight: 700;
-      font-size: 0.9rem;
-      flex-shrink: 0;
+    .hero-bullets li .num {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.2em;
+      color: var(--brass-light);
     }
 
-    /* ── HERO FORM CARD ── */
+    /* -- HERO FORM CARD --------------------------------- */
     .hero-form-card {
       background: var(--cream);
-      border-radius: 14px;
-      padding: 30px 26px;
-      box-shadow: 0 16px 50px rgba(0,0,0,0.25);
-      border: 1px solid var(--line);
+      border: 1px solid rgba(176, 141, 87, 0.35);
+      padding: 32px 30px 28px;
+      position: relative;
+    }
+    .hero-form-card::before, .hero-form-card::after {
+      content: ''; position: absolute; width: 18px; height: 1px; background: var(--brass);
+    }
+    .hero-form-card::before { top: -1px; left: -1px; }
+    .hero-form-card::after  { bottom: -1px; right: -1px; }
+    .hero-form-card .form-eyebrow {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--brass);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .hero-form-card .form-eyebrow .dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--brass);
     }
     .hero-form-card .form-title {
-      font-size: 1.05rem;
-      font-weight: 800;
-      color: var(--ink);
-      margin-bottom: 4px;
-      letter-spacing: -0.01em;
+      font-family: var(--serif);
+      font-weight: 350;
+      font-size: 28px;
+      letter-spacing: -0.02em;
+      color: var(--teal);
+      line-height: 1.15;
+      margin-bottom: 6px;
+      font-variation-settings: 'opsz' 48, 'SOFT' 50;
+    }
+    .hero-form-card .form-title em {
+      font-style: italic;
+      color: var(--brass);
+      font-variation-settings: 'opsz' 48, 'SOFT' 90;
     }
     .hero-form-card .form-sub {
-      font-size: 0.8rem;
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.04em;
       color: var(--ink-soft);
-      margin-bottom: 20px;
-    }
-    .hero-form-card .form-header {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 18px;
-      padding-bottom: 16px;
-      border-bottom: 1px solid var(--line);
-    }
-    .form-header-dot {
-      width: 7px; height: 7px;
-      background: var(--brass);
-      border-radius: 50%;
-      animation: pulse 1.6s infinite;
-      flex-shrink: 0;
-    }
-    .hero-form-card .form-header p {
-      font-size: 0.7rem;
-      font-weight: 700;
-      color: var(--brass-dark);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-    }
-
-    /* ── SHARED FORM STYLES ── */
-    .form-group { margin-bottom: 13px; }
-    label {
-      display: block;
-      font-size: 0.78rem;
-      font-weight: 700;
-      color: var(--ink);
-      margin-bottom: 5px;
-      letter-spacing: 0.01em;
-    }
-    input, select {
-      width: 100%;
-      padding: 12px 14px;
-      border: 1.5px solid var(--line);
-      border-radius: var(--radius);
-      font-size: 0.95rem;
-      color: var(--ink);
-      background: var(--white);
-      transition: border-color 0.15s, box-shadow 0.15s;
-      -webkit-appearance: none;
-      font-family: inherit;
-    }
-    input:focus, select:focus {
-      outline: none;
-      border-color: var(--teal);
-      box-shadow: 0 0 0 3px rgba(31,77,90,0.12);
-    }
-    .btn-submit {
-      width: 100%;
-      background: var(--teal);
-      color: var(--cream);
-      font-size: 1rem;
-      font-weight: 700;
-      padding: 14px;
-      border: none;
-      border-radius: var(--radius);
-      cursor: pointer;
-      margin-top: 8px;
-      letter-spacing: 0.01em;
-      transition: background 0.15s, transform 0.15s, box-shadow 0.15s;
-      font-family: inherit;
-    }
-    .btn-submit:hover {
-      background: var(--teal-dark);
-      transform: translateY(-1px);
-      box-shadow: 0 8px 24px rgba(31,77,90,0.28);
-    }
-    .form-disclaimer {
-      text-align: center;
-      font-size: 0.68rem;
-      color: var(--ink-light);
-      margin-top: 12px;
-      line-height: 1.5;
+      margin-bottom: 22px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--rule);
+      line-height: 1.6;
     }
     .success-inline {
       display: none;
-      text-align: center;
-      padding: 22px 18px;
+      padding: 26px 22px;
       background: var(--cream-warm);
-      border: 1.5px solid var(--brass);
-      border-radius: var(--radius);
-      color: var(--brass-dark);
-      font-weight: 700;
-      font-size: 0.92rem;
-      line-height: 1.6;
+      border: 1px solid var(--brass);
+      font-family: var(--serif);
+      font-size: 17px;
+      color: var(--teal);
+      line-height: 1.55;
+      font-variation-settings: 'opsz' 36, 'SOFT' 40;
     }
-
-    /* ── TRUST STRIP ── */
-    .trust-bar {
-      background: var(--cream-warm);
-      border-bottom: 1px solid var(--line);
-      padding: 16px 24px;
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
-    .trust-bar .item {
-      font-size: 0.78rem;
-      color: var(--ink);
-      font-weight: 700;
-      display: flex;
+    .success-inline .tag {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--brass);
+      display: inline-flex;
       align-items: center;
       gap: 8px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
+      margin-bottom: 10px;
     }
-    .trust-dot {
+    .success-inline .tag::before {
+      content: '';
       width: 6px; height: 6px;
       background: var(--brass);
       border-radius: 50%;
-      flex-shrink: 0;
     }
 
-    /* ── SECTIONS ── */
-    section { padding: 72px 24px; }
-    .section-label {
-      text-align: center;
-      font-size: 0.74rem;
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--brass-dark);
-      margin-bottom: 12px;
-    }
-    h2 {
-      text-align: center;
-      font-size: clamp(1.55rem, 4vw, 2.2rem);
-      font-weight: 800;
-      color: var(--ink);
-      margin-bottom: 14px;
-      max-width: 680px;
-      margin-left: auto;
-      margin-right: auto;
-      letter-spacing: -0.025em;
-      line-height: 1.2;
-    }
-    .section-sub {
-      text-align: center;
-      color: var(--ink-soft);
-      font-size: 0.98rem;
-      max-width: 560px;
-      margin: 0 auto 48px;
-      line-height: 1.65;
-    }
-
-    /* ── VALUE PROP ── */
-    .value-section { background: var(--cream); }
+    /* -- VALUE PROP -------------------------------------- */
     .value-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 22px;
-      max-width: 920px;
-      margin: 0 auto;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      border: 1px solid var(--rule);
+      border-bottom: none;
     }
     .value-card {
-      background: var(--white);
-      border: 1.5px solid var(--line);
-      border-radius: var(--radius);
-      padding: 32px 26px;
-      transition: transform 0.18s, box-shadow 0.18s;
+      padding: 36px 30px 40px;
+      border-right: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      background: var(--cream);
+      display: flex;
+      flex-direction: column;
+      transition: background 0.3s;
     }
-    .value-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 32px rgba(31,77,90,0.08);
+    .value-card:last-child { border-right: none; }
+    .value-card:hover { background: var(--cream-warm); }
+    .value-card .num {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      color: var(--brass);
+      margin-bottom: 22px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
     }
-    .value-card .icon {
-      font-size: 1.7rem;
-      margin-bottom: 14px;
-      display: block;
-      color: var(--teal);
+    .value-card .num::after {
+      content: '';
+      width: 18px;
+      height: 1px;
+      background: var(--brass);
+      opacity: 0.55;
     }
     .value-card h3 {
-      font-size: 1.05rem;
-      font-weight: 800;
-      color: var(--ink);
-      margin-bottom: 10px;
-      letter-spacing: -0.01em;
+      color: var(--teal);
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 400;
+      letter-spacing: -0.015em;
+      line-height: 1.2;
+      margin-bottom: 14px;
+      font-variation-settings: 'opsz' 36, 'SOFT' 40;
     }
+    .value-card.highlight { background: var(--teal); color: var(--cream); }
+    .value-card.highlight:hover { background: var(--teal-deep); }
+    .value-card.highlight h3 { color: var(--cream); }
+    .value-card.highlight .num { color: var(--brass-light); }
+    .value-card.highlight .num::after { background: var(--brass-light); }
+    .value-card.highlight p { color: rgba(250, 247, 242, 0.82); }
     .value-card p {
-      font-size: 0.9rem;
+      font-size: 14.5px;
       color: var(--ink-soft);
       line-height: 1.65;
     }
-    .value-card.highlight {
-      border-color: var(--teal);
-      background: var(--teal);
-      color: var(--cream);
+    @media (max-width: 820px) {
+      .value-grid { grid-template-columns: 1fr; }
+      .value-card { border-right: none; }
     }
-    .value-card.highlight .icon { color: var(--brass); }
-    .value-card.highlight h3 { color: var(--cream); }
-    .value-card.highlight p { color: rgba(250,247,242,0.78); }
 
-    /* ── HOW IT WORKS ── */
+    /* -- STEPS ------------------------------------------- */
     .steps-section { background: var(--cream-warm); }
     .steps-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      max-width: 1000px;
-      margin: 0 auto;
-      gap: 8px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border-top: 1px solid var(--rule);
     }
     .step-card {
-      padding: 30px 22px;
-      text-align: center;
+      padding: 40px 24px 0;
+      border-right: 1px solid var(--rule);
       position: relative;
     }
-    .step-num {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: var(--teal);
-      color: var(--cream);
-      font-size: 1.05rem;
-      font-weight: 800;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 16px;
-      box-shadow: 0 4px 12px rgba(31,77,90,0.2);
+    .step-card:last-child { border-right: none; }
+    .step-card .num {
+      font-family: var(--serif);
+      font-weight: 350;
+      font-size: 64px;
+      letter-spacing: -0.03em;
+      color: var(--teal);
+      line-height: 1;
+      margin-bottom: 24px;
+      font-variation-settings: 'opsz' 96, 'SOFT' 40;
+    }
+    .step-card .num em {
+      font-style: normal;
+      color: var(--brass);
     }
     .step-card h3 {
-      font-size: 1rem;
-      font-weight: 800;
-      margin-bottom: 9px;
-      color: var(--ink);
+      font-family: var(--serif);
+      font-size: 21px;
+      font-weight: 400;
       letter-spacing: -0.01em;
+      color: var(--ink);
+      margin-bottom: 10px;
+      line-height: 1.25;
+      font-variation-settings: 'opsz' 36, 'SOFT' 40;
     }
     .step-card p {
-      font-size: 0.88rem;
+      font-size: 14px;
       color: var(--ink-soft);
       line-height: 1.65;
     }
+    @media (max-width: 820px) {
+      .steps-grid { grid-template-columns: 1fr 1fr; }
+      .step-card:nth-child(2) { border-right: none; }
+      .step-card:nth-child(3), .step-card:nth-child(4) { border-top: 1px solid var(--rule); }
+    }
+    @media (max-width: 520px) {
+      .steps-grid { grid-template-columns: 1fr; }
+      .step-card { border-right: none; border-top: 1px solid var(--rule); }
+      .step-card:first-child { border-top: none; }
+    }
+    .steps-footnote {
+      text-align: center;
+      margin-top: 40px;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+    .steps-footnote a {
+      color: var(--teal);
+      text-decoration: none;
+      border-bottom: 1px solid var(--brass);
+      padding-bottom: 2px;
+    }
 
-    /* ── INDEPENDENT ADVANTAGE ── */
+    /* -- ADVANTAGE --------------------------------------- */
     .advantage-section {
       background: var(--teal);
       color: var(--cream);
     }
     .advantage-section h2 { color: var(--cream); }
-    .advantage-section .section-label { color: var(--brass); }
+    .advantage-section h2 em { color: var(--brass-light); }
+    .advantage-section .eyebrow { color: var(--brass-light); }
+    .advantage-section .eyebrow::before { background: var(--brass-light); }
     .advantage-inner {
       max-width: 780px;
-      margin: 0 auto;
-      text-align: center;
+      margin: 56px auto 0;
     }
     .advantage-body {
-      font-size: 1.05rem;
-      color: rgba(250,247,242,0.82);
-      line-height: 1.8;
-      margin-bottom: 0;
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: 21px;
+      line-height: 1.6;
+      color: rgba(250, 247, 242, 0.92);
+      font-variation-settings: 'opsz' 48, 'SOFT' 30;
     }
+    .advantage-body p + p { margin-top: 22px; }
     .advantage-body strong {
       color: var(--cream);
-      font-weight: 700;
+      font-weight: 400;
+      font-style: italic;
+      font-variation-settings: 'opsz' 48, 'SOFT' 80;
     }
 
-    /* ── NETWORK STATS ── */
-    .stats-section { background: var(--cream); }
+    /* -- STATS ------------------------------------------- */
     .stats-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 22px;
-      max-width: 860px;
-      margin: 0 auto 36px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      border: 1px solid var(--rule);
+      border-bottom: none;
     }
     .stat-card {
-      text-align: center;
-      padding: 32px 22px;
-      background: var(--white);
-      border: 1.5px solid var(--line);
-      border-radius: var(--radius);
+      padding: 44px 28px 40px;
+      border-right: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      text-align: left;
     }
-    .stat-number {
-      font-size: 2.4rem;
-      font-weight: 800;
+    .stat-card:last-child { border-right: none; }
+    .stat-card .stat-number {
+      font-family: var(--serif);
+      font-weight: 350;
+      font-size: clamp(48px, 6vw, 72px);
+      letter-spacing: -0.04em;
       color: var(--teal);
-      letter-spacing: -0.035em;
       line-height: 1;
+      margin-bottom: 16px;
+      font-variation-settings: 'opsz' 144, 'SOFT' 30;
+    }
+    .stat-card .stat-number em {
+      font-style: italic;
+      color: var(--brass);
+      font-variation-settings: 'opsz' 144, 'SOFT' 90;
+    }
+    .stat-card .stat-label {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink);
       margin-bottom: 8px;
     }
-    .stat-label {
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: var(--ink);
-      margin-bottom: 5px;
-    }
-    .stat-desc {
-      font-size: 0.78rem;
-      color: var(--ink-light);
-      line-height: 1.55;
+    .stat-card .stat-desc {
+      font-size: 13.5px;
+      color: var(--ink-soft);
+      line-height: 1.6;
     }
     .verified-seal {
       display: inline-flex;
       align-items: center;
-      gap: 12px;
-      background: var(--cream-warm);
-      border: 1.5px solid var(--brass);
-      border-radius: 12px;
-      padding: 16px 26px;
-      margin: 0 auto;
+      gap: 18px;
+      margin-top: 40px;
+      padding: 18px 26px;
+      border: 1px solid var(--brass);
+      background: var(--cream);
     }
-    .seal-icon {
-      width: 38px; height: 38px;
-      background: var(--brass);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--cream);
-      font-size: 1.05rem;
-      font-weight: 800;
-      flex-shrink: 0;
-    }
-    .seal-text { text-align: left; }
+    .seal-mark svg { width: 36px; height: 36px; }
+    .seal-text { line-height: 1.3; }
     .seal-text strong {
       display: block;
-      font-size: 0.92rem;
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: 17px;
       color: var(--ink);
-      font-weight: 800;
+      letter-spacing: -0.01em;
+      font-variation-settings: 'opsz' 36, 'SOFT' 40;
     }
     .seal-text span {
-      font-size: 0.7rem;
-      color: var(--ink-soft);
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
+      color: var(--ink-soft);
+    }
+    @media (max-width: 820px) {
+      .stats-grid { grid-template-columns: 1fr; }
+      .stat-card { border-right: none; }
     }
 
-    /* ── GALLERY ── */
+    /* -- GALLERY ----------------------------------------- */
     .gallery-section { background: var(--cream-warm); }
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 18px;
-      max-width: 1000px;
-      margin: 0 auto;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
     }
     .gallery-card {
-      background: var(--white);
-      border: 1.5px solid var(--line);
-      border-radius: var(--radius);
+      background: var(--cream);
+      border: 1px solid var(--rule);
       overflow: hidden;
+      transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
     }
+    .gallery-card:hover { transform: translateY(-3px); }
     .gallery-img {
-      aspect-ratio: 4 / 3;
-      background: linear-gradient(135deg, var(--teal-soft) 0%, var(--teal-dark) 100%);
+      aspect-ratio: 5 / 3;
+      background: linear-gradient(135deg, var(--teal) 0%, var(--teal-deep) 100%);
       display: flex;
-      align-items: center;
-      justify-content: center;
-      color: rgba(250,247,242,0.5);
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
+      align-items: flex-end;
+      padding: 24px;
+      color: var(--brass-light);
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
     }
-    .gallery-meta {
-      padding: 16px 18px;
+    .gallery-img::before {
+      content: '';
+      width: 8px; height: 8px;
+      background: var(--brass-light);
+      border-radius: 50%;
+      margin-right: 12px;
+    }
+    .gallery-meta { padding: 22px 24px 26px; }
+    .gallery-meta .num {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      color: var(--brass);
+      margin-bottom: 8px;
+      text-transform: uppercase;
     }
     .gallery-meta h4 {
-      font-size: 0.95rem;
-      font-weight: 800;
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: -0.01em;
       color: var(--ink);
-      margin-bottom: 5px;
+      margin-bottom: 6px;
+      font-variation-settings: 'opsz' 36, 'SOFT' 40;
     }
     .gallery-meta p {
-      font-size: 0.82rem;
+      font-size: 14px;
       color: var(--ink-soft);
-      line-height: 1.55;
+      line-height: 1.6;
+    }
+    @media (max-width: 720px) {
+      .gallery-grid { grid-template-columns: 1fr; gap: 20px; }
     }
 
-    /* ── REVIEWS ── */
-    .reviews-section { background: var(--cream); }
+    /* -- REVIEWS ----------------------------------------- */
     .reviews-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 22px;
-      max-width: 960px;
-      margin: 0 auto;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      border: 1px solid var(--rule);
     }
     .review-card {
-      background: var(--white);
-      border: 1.5px solid var(--line);
-      border-radius: var(--radius);
-      padding: 26px;
+      padding: 36px 30px;
+      border-right: 1px solid var(--rule);
     }
+    .review-card:last-child { border-right: none; }
     .review-stars {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
       color: var(--brass);
-      font-size: 0.98rem;
-      margin-bottom: 12px;
-      letter-spacing: 0.08em;
+      margin-bottom: 18px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .review-stars::after {
+      content: 'Five · star';
+      color: var(--ink-soft);
+      letter-spacing: 0.18em;
     }
     .review-text {
-      font-size: 0.92rem;
-      color: var(--ink-soft);
-      line-height: 1.7;
-      margin-bottom: 16px;
+      font-family: var(--serif);
+      font-weight: 350;
+      font-size: 17px;
       font-style: italic;
+      color: var(--ink);
+      line-height: 1.55;
+      margin-bottom: 22px;
+      font-variation-settings: 'opsz' 36, 'SOFT' 60;
     }
     .review-author {
-      font-size: 0.85rem;
-      font-weight: 700;
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 500;
       color: var(--ink);
+      margin-bottom: 3px;
     }
     .review-source {
-      font-size: 0.72rem;
-      color: var(--ink-light);
-      margin-top: 3px;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      color: var(--ink-soft);
+    }
+    @media (max-width: 820px) {
+      .reviews-grid { grid-template-columns: 1fr; }
+      .review-card { border-right: none; border-bottom: 1px solid var(--rule); }
+      .review-card:last-child { border-bottom: none; }
     }
 
-    /* ── FAQ ── */
+    /* -- FAQ --------------------------------------------- */
     .faq-section { background: var(--cream-warm); }
     .faq-list {
-      max-width: 720px;
+      max-width: 780px;
       margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
+      border-top: 1px solid var(--rule);
     }
-    .faq-item {
-      background: var(--cream);
-      border: 1.5px solid var(--line);
-      border-radius: var(--radius);
-      overflow: hidden;
-    }
+    .faq-item { border-bottom: 1px solid var(--rule); }
     .faq-q {
       width: 100%;
       background: none;
       border: none;
-      padding: 19px 22px;
+      padding: 22px 0;
       text-align: left;
-      font-size: 0.95rem;
-      font-weight: 700;
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 400;
       color: var(--ink);
       cursor: pointer;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 12px;
-      font-family: inherit;
+      gap: 16px;
+      letter-spacing: -0.01em;
+      line-height: 1.35;
+      font-variation-settings: 'opsz' 36, 'SOFT' 40;
+      transition: color 0.2s;
     }
     .faq-q:hover { color: var(--teal); }
     .faq-icon {
-      font-size: 1.25rem;
-      color: var(--brass);
       flex-shrink: 0;
-      transition: transform 0.2s;
-      font-weight: 400;
+      font-family: var(--mono);
+      font-size: 14px;
+      color: var(--brass);
+      transition: transform 0.3s cubic-bezier(0.16,1,0.3,1);
+      width: 20px;
+      text-align: center;
     }
     .faq-a {
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.35s ease;
-      font-size: 0.92rem;
+      transition: max-height 0.4s ease;
+    }
+    .faq-a-inner {
+      padding: 0 0 24px;
+      max-width: 660px;
+      font-size: 14.5px;
       color: var(--ink-soft);
       line-height: 1.7;
     }
-    .faq-a-inner { padding: 0 22px 20px; }
-    .faq-item.open .faq-a { max-height: 400px; }
+    .faq-a-inner a {
+      color: var(--teal);
+      border-bottom: 1px solid var(--brass);
+      padding-bottom: 1px;
+      text-decoration: none;
+    }
+    .faq-item.open .faq-a { max-height: 500px; }
     .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-footnote {
+      text-align: center;
+      margin-top: 40px;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+    .faq-footnote a {
+      color: var(--teal);
+      text-decoration: none;
+      border-bottom: 1px solid var(--brass);
+      padding-bottom: 2px;
+    }
 
-    /* ── BOTTOM FORM ── */
+    /* -- BOTTOM FORM ------------------------------------- */
     .form-section { background: var(--cream); }
     .bottom-form-wrap {
-      max-width: 540px;
-      margin: 0 auto;
-      background: var(--white);
-      border-radius: var(--radius);
-      border: 1.5px solid var(--line);
-      padding: 38px 30px;
-      box-shadow: 0 6px 28px rgba(31,77,90,0.07);
+      max-width: 560px;
+      margin: 48px auto 0;
+      background: var(--cream-warm);
+      border: 1px solid rgba(176, 141, 87, 0.35);
+      padding: 40px 36px;
+      position: relative;
     }
-    .bottom-form-wrap .form-header {
-      display: flex;
+    .bottom-form-wrap::before, .bottom-form-wrap::after {
+      content: ''; position: absolute; width: 24px; height: 1px; background: var(--brass);
+    }
+    .bottom-form-wrap::before { top: -1px; left: -1px; }
+    .bottom-form-wrap::after  { bottom: -1px; right: -1px; }
+    .bottom-form-wrap .form-eyebrow {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--brass);
+      display: inline-flex;
       align-items: center;
       gap: 10px;
-      margin-bottom: 22px;
-      padding-bottom: 18px;
-      border-bottom: 1px solid var(--line);
+      margin-bottom: 16px;
     }
-    .bottom-form-wrap .form-header p {
-      font-size: 0.78rem;
-      font-weight: 700;
-      color: var(--brass-dark);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
+    .bottom-form-wrap .form-eyebrow .dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--brass);
+    }
+    .bottom-form-wrap .form-title {
+      font-family: var(--serif);
+      font-weight: 350;
+      font-size: 26px;
+      letter-spacing: -0.02em;
+      color: var(--teal);
+      line-height: 1.2;
+      margin-bottom: 6px;
+      font-variation-settings: 'opsz' 48, 'SOFT' 50;
+    }
+    .bottom-form-wrap .form-sub {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.04em;
+      color: var(--ink-soft);
+      margin-bottom: 26px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--rule);
+      line-height: 1.6;
     }
     #bottom-success {
       display: none;
-      text-align: center;
-      padding: 34px 26px;
+      max-width: 560px;
+      margin: 48px auto 0;
+      padding: 40px 36px;
       background: var(--cream-warm);
-      border: 1.5px solid var(--brass);
-      border-radius: var(--radius);
-      color: var(--brass-dark);
-      font-weight: 700;
-      font-size: 1.02rem;
-      max-width: 540px;
-      margin: 0 auto;
-      line-height: 1.65;
+      border: 1px solid var(--brass);
+      font-family: var(--serif);
+      font-size: 19px;
+      color: var(--teal);
+      line-height: 1.55;
+      font-variation-settings: 'opsz' 48, 'SOFT' 40;
+    }
+    #bottom-success .tag {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--brass);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    #bottom-success .tag::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--brass);
+      border-radius: 50%;
+    }
+    #bottom-success span.sub {
+      display: block;
+      margin-top: 8px;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.04em;
+      color: var(--ink-soft);
     }
 
-    /* ── EXIT POPUP ── */
+    /* -- EXIT POPUP -------------------------------------- */
     .popup-overlay {
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(22, 56, 68, 0.7);
+      background: rgba(22, 56, 68, 0.78);
       z-index: 1000;
       align-items: center;
       justify-content: center;
       padding: 20px;
-      backdrop-filter: blur(2px);
+      backdrop-filter: blur(3px);
     }
     .popup-overlay.active { display: flex; }
     .popup-box {
       background: var(--cream);
-      border-radius: 14px;
-      padding: 38px 30px;
+      padding: 44px 36px 36px;
       max-width: 480px;
       width: 100%;
       position: relative;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+      border: 1px solid rgba(176, 141, 87, 0.5);
     }
+    .popup-box::before, .popup-box::after {
+      content: '';
+      position: absolute;
+      width: 22px; height: 1px;
+      background: var(--brass);
+    }
+    .popup-box::before { top: -1px; left: -1px; }
+    .popup-box::after  { bottom: -1px; right: -1px; }
     .popup-close {
       position: absolute;
       top: 14px; right: 16px;
       background: none;
       border: none;
-      font-size: 1.45rem;
+      font-family: var(--mono);
+      font-size: 18px;
       cursor: pointer;
-      color: var(--ink-light);
+      color: var(--ink-soft);
       line-height: 1;
+      transition: color 0.2s;
     }
     .popup-close:hover { color: var(--ink); }
-    .popup-badge {
-      display: inline-block;
-      background: var(--cream-warm);
-      border: 1px solid var(--brass);
-      color: var(--brass-dark);
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
+    .popup-eyebrow {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
-      padding: 5px 14px;
-      border-radius: 100px;
+      color: var(--brass);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
       margin-bottom: 16px;
     }
-    .popup-box h3 {
-      font-size: 1.35rem;
-      font-weight: 800;
-      color: var(--ink);
-      line-height: 1.2;
-      margin-bottom: 10px;
-      letter-spacing: -0.02em;
+    .popup-eyebrow::before {
+      content: '';
+      width: 18px; height: 1px;
+      background: var(--brass);
+      opacity: 0.7;
     }
-    .popup-box p {
-      font-size: 0.92rem;
+    .popup-box h3 {
+      font-family: var(--serif);
+      font-weight: 350;
+      font-size: 28px;
+      letter-spacing: -0.02em;
+      color: var(--teal);
+      line-height: 1.15;
+      margin-bottom: 10px;
+      font-variation-settings: 'opsz' 48, 'SOFT' 50;
+    }
+    .popup-box h3 em {
+      font-style: italic;
+      color: var(--brass);
+      font-variation-settings: 'opsz' 48, 'SOFT' 90;
+    }
+    .popup-box .popup-desc {
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: 15px;
       color: var(--ink-soft);
-      margin-bottom: 22px;
+      margin-bottom: 24px;
       line-height: 1.6;
+      font-variation-settings: 'opsz' 24, 'SOFT' 20;
     }
     #popup-success {
       display: none;
-      text-align: center;
-      padding: 18px;
-      color: var(--brass-dark);
-      font-weight: 700;
-      font-size: 0.92rem;
-    }
-
-    /* ── STICKY MOBILE CTA ── */
-    .sticky-cta {
-      display: none;
-      position: fixed;
-      bottom: 0; left: 0; right: 0;
-      background: var(--teal);
-      padding: 14px 20px;
-      z-index: 900;
-      box-shadow: 0 -4px 20px rgba(0,0,0,0.18);
-    }
-    .sticky-cta a {
-      display: block;
-      text-align: center;
-      color: var(--cream);
-      font-weight: 700;
-      font-size: 1rem;
-      text-decoration: none;
-      letter-spacing: 0.01em;
-    }
-    @media (max-width: 768px) {
-      .sticky-cta { display: block; }
-      body { padding-bottom: 58px; }
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      background: var(--ink);
-      color: var(--ink-light);
-      text-align: center;
-      padding: 32px 24px;
-      font-size: 0.8rem;
-      line-height: 1.85;
-    }
-    footer a {
-      color: var(--cream);
-      text-decoration: none;
-    }
-    footer a:hover { color: var(--brass); }
-    .footer-links {
-      margin-bottom: 8px;
-    }
-    .footer-links a {
-      margin: 0 10px;
-    }
-
-    @media (max-width: 560px) {
-      section { padding: 56px 20px; }
-      .trust-bar { gap: 20px; padding: 14px 18px; }
-      .bottom-form-wrap { padding: 26px 20px; }
+      text-align: left;
+      padding: 18px 0;
+      font-family: var(--serif);
+      font-style: italic;
+      color: var(--teal);
+      font-size: 17px;
+      font-variation-settings: 'opsz' 36, 'SOFT' 80;
     }
   </style>
 </head>
@@ -870,18 +793,30 @@
 
   <!-- ALERT BAR -->
   <div class="alert-bar">
-    Accepting bath audits in Grand Rapids, Holland, Grand Haven &amp; Muskegon&nbsp;&nbsp;&middot;&nbsp;&nbsp;<span>Free, independent, no high-pressure pitch.</span>
+    Grand Rapids <span class="sep">·</span> Holland <span class="sep">·</span> Grand Haven <span class="sep">·</span> Muskegon <span class="sep">·</span> <span class="soft">Free contractor match · No pressure</span>
   </div>
 
   <!-- HEADER -->
-  <header>
-    <div class="logo">
-      West Michigan <span>Bath Audit</span>
-      <sub>Independent Bath Remodel Audits</sub>
-    </div>
-    <div class="header-right">
-      <a class="header-phone" href="tel:+16163259505">(616) 325-9505</a>
-      <a class="call-link" href="#form">Get Free Audit</a>
+  <header class="site">
+    <div class="row">
+      <a class="site-logo" href="/" aria-label="West Michigan Bath Audit">
+        <svg viewBox="0 0 620 110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <g transform="translate(50, 55)">
+            <circle class="wba-mark-stroke" cx="0" cy="0" r="30" fill="none" stroke="#1F4D5A" stroke-width="2"/>
+            <line class="wba-mark-stroke" x1="-20" y1="0" x2="20" y2="0" stroke="#1F4D5A" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="13" cy="-13" r="3" fill="#B08D57"/>
+          </g>
+          <line x1="105" y1="28" x2="105" y2="82" stroke="#B08D57" stroke-width="1" opacity="0.55"/>
+          <text x="125" y="58" font-family="Fraunces, serif" font-weight="400" font-size="38" fill="#1F4D5A" letter-spacing="-0.02em" style="font-variation-settings: 'opsz' 96, 'SOFT' 40;">WBA<tspan fill="#B08D57">.</tspan></text>
+          <text x="125" y="80" font-family="Manrope, sans-serif" font-weight="300" font-size="9" fill="#1A1A1A" letter-spacing="0.42em">WEST · MICHIGAN · BATH · AUDIT</text>
+        </svg>
+      </a>
+      <nav class="site-nav">
+        <a class="nav-link" href="/process.html">How it works</a>
+        <a class="nav-link" href="/cost-guide.html">Cost guide</a>
+        <a class="tel" href="tel:+16163259505">(616) 325-9505</a>
+        <a class="call-link" href="#form">Get matched</a>
+      </nav>
     </div>
   </header>
 
@@ -889,26 +824,20 @@
   <section class="hero">
     <div class="hero-inner">
       <div class="hero-left">
-        <div class="badge">
-          <span class="badge-dot"></span>
-          Accepting audits this week
-        </div>
-        <h1>Find out what your bath remodel <em>should really cost</em> in West Michigan, 2026.</h1>
-        <p class="hero-desc">A free, independent walk-through. We benchmark your project against fair-market pricing, flag the red flags, and connect you with three verified local contractors so you can compare apples-to-apples against our audit. No high-pressure pitch.</p>
+        <p class="eyebrow">Free contractor match · 2026</p>
+        <h1>Up to three quotes from <em>vetted</em> West Michigan bath contractors.</h1>
+        <p class="hero-desc">Submit one form. We match you with up to three pre-screened local bath specialists. Each one quotes your project. You compare, you pick — or walk away. No third-party lead aggregators. No call centers. No homeowner fee.</p>
         <ul class="hero-bullets">
-          <li>Independent &mdash; we don&rsquo;t install, we vet.</li>
-          <li>Fair-cost benchmark using 2026 West MI pricing data.</li>
-          <li>Three vetted quotes. Your choice.</li>
+          <li><span class="num">01 ·</span><span>Vetted West Michigan bath contractors only.</span></li>
+          <li><span class="num">02 ·</span><span>Your info goes to up to three matches — never auctioned wider.</span></li>
+          <li><span class="num">03 ·</span><span>Free for homeowners. Funded by the contractor network.</span></li>
         </ul>
       </div>
 
       <div class="hero-form-card">
-        <div class="form-header">
-          <span class="form-header-dot"></span>
-          <p>Accepting requests now</p>
-        </div>
-        <p class="form-title">Book your free bath audit</p>
-        <p class="form-sub">Takes 60 seconds. Contractors contact you within 24 hours.</p>
+        <p class="form-eyebrow"><span class="dot"></span>Get matched</p>
+        <h2 class="form-title">Free contractor <em>match.</em></h2>
+        <p class="form-sub">60 seconds. Contractors reach out within 24 hours.</p>
 
         <form id="hero-form" method="POST">
           <input type="hidden" name="lead_id" id="hero-lead-id" />
@@ -918,7 +847,7 @@
             <input type="text" id="h-zip" name="zip" placeholder="49503" required inputmode="numeric" maxlength="5" />
           </div>
           <div class="form-group">
-            <label for="h-bath-condition">What&rsquo;s the current state of your bath?</label>
+            <label for="h-bath-condition">Current state of bath</label>
             <select id="h-bath-condition" name="bath_condition">
               <option value="" disabled selected>Select an option</option>
               <option value="Old/Dated">Old or dated</option>
@@ -932,325 +861,422 @@
             <input type="text" id="h-name" name="name" placeholder="John Smith" required autocomplete="name" />
           </div>
           <div class="form-group">
-            <label for="h-phone">Mobile phone <span style="font-weight:400;color:var(--ink-light);">(contractors reach you here)</span></label>
+            <label for="h-phone">Mobile phone <span class="hint">(contractors reach you here)</span></label>
             <input type="tel" id="h-phone" name="phone" placeholder="(616) 555-0000" required autocomplete="tel" />
           </div>
-          <button type="submit" class="btn-submit">Book my free audit</button>
-          <p class="form-disclaimer">By submitting, you agree to be contacted by West Michigan Bath Audit and up to three verified bath contractors about your project.</p>
+          <button type="submit" class="btn-submit">Match me with contractors</button>
+          <p class="form-disclaimer">By submitting, you agree to be contacted by West Michigan Bath Audit and up to three vetted bath contractors about your project.</p>
         </form>
         <div class="success-inline" id="hero-success">
-          You&rsquo;re in. Contractors will reach out within 24 hours.
+          <p class="tag">You&rsquo;re in</p>
+          Contractors will reach out within 24 hours.
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TRUST STRIP -->
+  <!-- TRUST BAR -->
   <div class="trust-bar">
-    <div class="item"><span class="trust-dot"></span> Independent</div>
-    <div class="item"><span class="trust-dot"></span> Local to West Michigan</div>
-    <div class="item"><span class="trust-dot"></span> Free for homeowners</div>
-    <div class="item"><span class="trust-dot"></span> No obligation</div>
+    <div class="row">
+      <div class="item">Free for homeowners</div>
+      <div class="item">Local to West Michigan</div>
+      <div class="item">Up to three matches</div>
+      <div class="item">No obligation</div>
+    </div>
   </div>
 
   <!-- VALUE PROP -->
-  <section class="value-section">
-    <p class="section-label">Why an audit, not a quote</p>
-    <h2>A second opinion before you spend $15,000 on a bathroom.</h2>
-    <p class="section-sub">Most homeowners call one contractor and sign the first quote. We do it differently: an independent walk-through, fair-market benchmarks, then three verified contractor quotes.</p>
-    <div class="value-grid">
-      <div class="value-card highlight">
-        <span class="icon">&#9881;</span>
-        <h3>Independent walk-through</h3>
-        <p>A real person reviews your bath, your goals, and your budget. We don&rsquo;t install &mdash; so we have zero reason to upsell you.</p>
+  <section class="brand value-section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">01 · Why us</p>
+          <h2>A curated network <em>beats</em> a five-contractor auction.</h2>
+        </div>
+        <p class="blurb">Most lead services sell your form to a wide pool of contractors who race to call you first. We don&rsquo;t. Up to three matches from a vetted local network. That&rsquo;s the whole service.</p>
       </div>
-      <div class="value-card">
-        <span class="icon">&#8505;</span>
-        <h3>Fair-cost benchmark</h3>
-        <p>We tell you the median 2026 West Michigan price for your exact scope, plus the red flags to watch for in any quote you receive.</p>
-      </div>
-      <div class="value-card">
-        <span class="icon">&#9745;</span>
-        <h3>Three vetted quotes</h3>
-        <p>Up to three verified local contractors quote against our audit. You compare apples-to-apples and pick &mdash; or walk away.</p>
+
+      <div class="value-grid">
+        <article class="value-card highlight">
+          <div class="num">01</div>
+          <h3>Vetted contractors only</h3>
+          <p>Every contractor in our network is screened on license, insurance, Google review count, and pricing transparency before they ever quote a homeowner.</p>
+        </article>
+        <article class="value-card">
+          <div class="num">02</div>
+          <h3>Up to three matches</h3>
+          <p>Not a bidding war. Up to three vetted contractors get your project — each quoting independently. You compare apples-to-apples.</p>
+        </article>
+        <article class="value-card">
+          <div class="num">03</div>
+          <h3>No third-party reselling</h3>
+          <p>Your info goes to the up-to-three contractors we match you with. Not aggregators. Not call centers. Not marketing lists.</p>
+        </article>
       </div>
     </div>
   </section>
 
   <!-- HOW IT WORKS -->
-  <section class="steps-section">
-    <p class="section-label">How the audit works</p>
-    <h2>Four steps. Zero pressure.</h2>
-    <p class="section-sub">From submitting the form to the day work starts &mdash; here&rsquo;s the path.</p>
-    <div class="steps-grid">
-      <div class="step-card">
-        <div class="step-num">1</div>
-        <h3>Submit the form</h3>
-        <p>60 seconds. We get your zip, your bath situation, and the best number to reach you.</p>
+  <section class="brand steps-section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">02 · How it works</p>
+          <h2>Four steps. <em>Zero pressure.</em></h2>
+        </div>
+        <p class="blurb">From submitting the form to the day work starts — here&rsquo;s the path. Every step happens on your timeline, not ours.</p>
       </div>
-      <div class="step-card">
-        <div class="step-num">2</div>
-        <h3>Free walk-through</h3>
-        <p>An independent auditor visits (or video-walks) your bath. Reviews scope, materials, and what a fair quote should include.</p>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="num">01<em>.</em></div>
+          <h3>Submit the form</h3>
+          <p>60 seconds. Your zip, the current state of your bath, your name, and the best number to reach you.</p>
+        </div>
+        <div class="step-card">
+          <div class="num">02<em>.</em></div>
+          <h3>We match you</h3>
+          <p>Same day if submitted before 3pm. We pick up to three contractors from our vetted West Michigan network who fit your scope and your zip.</p>
+        </div>
+        <div class="step-card">
+          <div class="num">03<em>.</em></div>
+          <h3>Contractors reach out</h3>
+          <p>Within 24 hours. Each one contacts you with a quote. No bidding war — they each quote independently.</p>
+        </div>
+        <div class="step-card">
+          <div class="num">04<em>.</em></div>
+          <h3>You pick (or don&rsquo;t)</h3>
+          <p>Compare the quotes. Ask questions. Walk away. Your decision — no follow-up sales pressure from us.</p>
+        </div>
       </div>
-      <div class="step-card">
-        <div class="step-num">3</div>
-        <h3>Three vetted quotes</h3>
-        <p>We share fair-market pricing for your scope and connect you with up to three pre-vetted local contractors who quote against the same audit-defined scope.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-num">4</div>
-        <h3>You pick (or don&rsquo;t)</h3>
-        <p>You decide if and when to move forward. Walk away free. No follow-up sales pressure.</p>
-      </div>
+      <p class="steps-footnote">Want the full breakdown? <a href="/process.html">See how the match works &rarr;</a></p>
     </div>
-    <p style="text-align:center;margin-top:34px;font-size:0.92rem;color:var(--ink-soft);">
-      Want the full breakdown? <a href="/process.html" style="color:var(--teal);font-weight:700;">See the audit process &rarr;</a>
-    </p>
   </section>
 
   <!-- INDEPENDENT ADVANTAGE -->
-  <section class="advantage-section">
-    <p class="section-label">Why we exist</p>
-    <h2>The independent advantage.</h2>
-    <div class="advantage-inner">
-      <p class="advantage-body">West Michigan homeowners told us the same story over and over: <strong>they wanted a bath remodel but didn&rsquo;t trust the quotes they were getting.</strong> Single-truck installers padding the price. Big-name franchises pushing $30k packages on a $12k job. No way to know what was fair.<br><br>So we built the audit. <strong>We don&rsquo;t install bathrooms.</strong> We benchmark them, vet the people who do, and stand between you and the bad quotes &mdash; so you can spend confidently or walk away clean.</p>
+  <section class="brand advantage-section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">03 · Why three, not thirty</p>
+          <h2>The <em>curated-match</em> advantage.</h2>
+        </div>
+        <p class="blurb" style="color: rgba(250,247,242,0.7);">Built around one principle: homeowners deserve a short list of good options, not an inbox full of cold pitches.</p>
+      </div>
+      <div class="advantage-inner">
+        <div class="advantage-body">
+          <p>The standard home-services lead model is to sell your form to five-plus contractors who then race to call you first. <strong>It works for the lead broker. It doesn&rsquo;t work for you.</strong> You get sales pitches all afternoon, follow-up calls the next day, and weeks of email until somebody loses interest.</p>
+          <p>We do it differently. <strong>Up to three contractors. That&rsquo;s it.</strong> Each one is from a vetted West Michigan network — screened on license, insurance, reviews, and pricing transparency before they ever quote. Three options. One comparison. Your choice — or walk away clean.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- NETWORK STATS -->
-  <section class="stats-section">
-    <p class="section-label">Our vetted network</p>
-    <h2>The numbers that matter.</h2>
-    <p class="section-sub">Every contractor in our network is independently reviewed before they ever quote a homeowner.</p>
-    <div class="stats-grid">
-      <div class="stat-card">
-        <div class="stat-number">4.9&#9733;</div>
-        <div class="stat-label">Average network rating</div>
-        <div class="stat-desc">Verified Google reviews across vetted contractors.</div>
+  <section class="brand stats-section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">04 · Our vetted network</p>
+          <h2>The numbers <em>that matter.</em></h2>
+        </div>
+        <p class="blurb">Contractors are screened on license, insurance, review count, and pricing transparency before joining the network. No pay-to-play.</p>
       </div>
-      <div class="stat-card">
-        <div class="stat-number">$7&ndash;13k</div>
-        <div class="stat-label">Fair 2026 West MI range</div>
-        <div class="stat-desc">Tub-to-shower conversions, full-quote scope.</div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">4.9<em>★</em></div>
+          <div class="stat-label">Avg. network rating</div>
+          <div class="stat-desc">Verified Google reviews across network contractors.</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">$7<em>–</em>13k</div>
+          <div class="stat-label">Fair 2026 West MI range</div>
+          <div class="stat-desc">Tub-to-shower conversions, full-quote scope. See <a href="/cost-guide.html" style="color:var(--brass);text-decoration:none;border-bottom:1px solid var(--brass);">2026 cost guide</a>.</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">&lt;24<em>h</em></div>
+          <div class="stat-label">Contractor response time</div>
+          <div class="stat-desc">From form submit to first contractor contact.</div>
+        </div>
       </div>
-      <div class="stat-card">
-        <div class="stat-number">&lt;24h</div>
-        <div class="stat-label">Contractor response time</div>
-        <div class="stat-desc">From form submit to first contact.</div>
-      </div>
-    </div>
-    <div style="text-align:center;">
+
       <div class="verified-seal">
-        <div class="seal-icon">&#10003;</div>
+        <div class="seal-mark">
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <g transform="translate(40, 40)">
+              <circle cx="0" cy="0" r="28" fill="none" stroke="#1F4D5A" stroke-width="1.8"/>
+              <line x1="-18" y1="0" x2="18" y2="0" stroke="#1F4D5A" stroke-width="1.8" stroke-linecap="round"/>
+              <circle cx="13" cy="-13" r="2.8" fill="#B08D57"/>
+            </g>
+          </svg>
+        </div>
         <div class="seal-text">
-          <strong>Verified independent service</strong>
-          <span>West Michigan Bath Audit &middot; Est. 2025</span>
+          <strong>Local contractor-matching service</strong>
+          <span>West Michigan Bath Audit · Est. 2025</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- GALLERY -->
-  <section class="gallery-section">
-    <p class="section-label">Recent transformations</p>
-    <h2>Real West Michigan baths, audited and installed.</h2>
-    <p class="section-sub">A snapshot of recent projects our network has completed. Click through to read what changed and what it cost.</p>
-    <div class="gallery-grid">
-      <div class="gallery-card">
-        <div class="gallery-img">Before / after</div>
-        <div class="gallery-meta">
-          <h4>Forest Hills tub-to-shower</h4>
-          <p>1990s drop-in tub replaced with a low-threshold walk-in shower. One-day install.</p>
+  <section class="brand gallery-section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">05 · Recent installs</p>
+          <h2>Real West Michigan baths, <em>installed by our network.</em></h2>
         </div>
+        <p class="blurb">A snapshot of recent projects our network contractors have completed. Photos courtesy of the contractor teams who installed them.</p>
       </div>
-      <div class="gallery-card">
-        <div class="gallery-img">Before / after</div>
-        <div class="gallery-meta">
-          <h4>Ada master bath refresh</h4>
-          <p>Tile-to-acrylic conversion with brushed brass fixtures. Two-day install.</p>
-        </div>
-      </div>
-      <div class="gallery-card">
-        <div class="gallery-img">Before / after</div>
-        <div class="gallery-meta">
-          <h4>Holland senior-safety walk-in</h4>
-          <p>Zero-threshold entry, grab bars, slip-resistant pan. Audited and signed off.</p>
-        </div>
-      </div>
-      <div class="gallery-card">
-        <div class="gallery-img">Before / after</div>
-        <div class="gallery-meta">
-          <h4>Rockford guest bath</h4>
-          <p>Full refresh on a tight budget. Audit identified $4k in quote padding.</p>
-        </div>
+
+      <div class="gallery-grid">
+        <article class="gallery-card">
+          <div class="gallery-img">Before / after</div>
+          <div class="gallery-meta">
+            <div class="num">01 · Forest Hills</div>
+            <h4>Tub-to-shower conversion</h4>
+            <p>1990s drop-in tub replaced with a low-threshold walk-in shower. One-day install.</p>
+          </div>
+        </article>
+        <article class="gallery-card">
+          <div class="gallery-img">Before / after</div>
+          <div class="gallery-meta">
+            <div class="num">02 · Ada</div>
+            <h4>Master bath refresh</h4>
+            <p>Tile-to-acrylic conversion with brushed brass fixtures. Two-day install.</p>
+          </div>
+        </article>
+        <article class="gallery-card">
+          <div class="gallery-img">Before / after</div>
+          <div class="gallery-meta">
+            <div class="num">03 · Holland</div>
+            <h4>Senior-safety walk-in</h4>
+            <p>Zero-threshold entry, grab bars, slip-resistant pan. ADA-compliant.</p>
+          </div>
+        </article>
+        <article class="gallery-card">
+          <div class="gallery-img">Before / after</div>
+          <div class="gallery-meta">
+            <div class="num">04 · Rockford</div>
+            <h4>Guest bath refresh</h4>
+            <p>Full refresh on a tight budget. Three competing quotes inside our fair range.</p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
   <!-- REVIEWS -->
-  <section class="reviews-section">
-    <p class="section-label">Verified reviews</p>
-    <h2>From real West Michigan homeowners.</h2>
-    <p class="section-sub">Reviews sourced from Google. These are the contractors in our network.</p>
-    <div class="reviews-grid">
-      <div class="review-card">
-        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="review-text">&ldquo;Great experience with Top Home Improvements. They were easy to work with, answered all our questions, got the job done fast and our bathroom looks awesome. Very happy and would work with them again.&rdquo;</p>
-        <div class="review-author">Avery S. &middot; West Michigan</div>
-        <div class="review-source">Google review</div>
+  <section class="brand reviews-section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">06 · Verified reviews</p>
+          <h2>From real West Michigan <em>homeowners.</em></h2>
+        </div>
+        <p class="blurb">Reviews from Google and homeowner follow-ups. These are the contractors in our network.</p>
       </div>
-      <div class="review-card">
-        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="review-text">&ldquo;Honest people. They walked through what we were getting quoted on and saved us from a $9k upsell we didn&rsquo;t need. The specialist they paired us with finished in one day.&rdquo;</p>
-        <div class="review-author">Pending homeowner &middot; Grand Rapids</div>
-        <div class="review-source">Audit feedback</div>
-      </div>
-      <div class="review-card">
-        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="review-text">&ldquo;Couldn&rsquo;t believe this was free. The auditor was straight with us about what we needed and what we didn&rsquo;t. Easy decision after that.&rdquo;</p>
-        <div class="review-author">Pending homeowner &middot; Holland</div>
-        <div class="review-source">Audit feedback</div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <p class="review-stars">★★★★★</p>
+          <p class="review-text">&ldquo;Great experience with Top Home Improvements. They were easy to work with, answered all our questions, got the job done fast and our bathroom looks awesome. Very happy and would work with them again.&rdquo;</p>
+          <div class="review-author">Avery S.</div>
+          <div class="review-source">Google review · West Michigan</div>
+        </div>
+        <div class="review-card">
+          <p class="review-stars">★★★★★</p>
+          <p class="review-text">&ldquo;Got three quotes through them. One was way over, one was reasonable, and one nailed it. Easy comparison and no follow-up pressure from WBA.&rdquo;</p>
+          <div class="review-author">Pending homeowner</div>
+          <div class="review-source">Homeowner feedback · Grand Rapids</div>
+        </div>
+        <div class="review-card">
+          <p class="review-stars">★★★★★</p>
+          <p class="review-text">&ldquo;Couldn&rsquo;t believe this was free. The three contractors they sent were all legitimate. Picked the one I liked, the other two stopped following up when I told them. Clean experience.&rdquo;</p>
+          <div class="review-author">Pending homeowner</div>
+          <div class="review-source">Homeowner feedback · Holland</div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="faq-section">
-    <p class="section-label">Common questions</p>
-    <h2>FAQ.</h2>
-    <p class="section-sub">Everything you need to know before submitting.</p>
-    <div class="faq-list">
-      <div class="faq-item">
-        <button class="faq-q">Is the audit really 100% free? <span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Yes. We are an independent matching service funded by our network of vetted bath contractors. There is no charge to the homeowner &mdash; ever. If anyone asks you for a fee, that is not us.</div></div>
+  <section class="brand faq-section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">07 · Common questions</p>
+          <h2>FAQ.</h2>
+        </div>
+        <p class="blurb">Everything you need to know before submitting.</p>
       </div>
-      <div class="faq-item">
-        <button class="faq-q">How much should a bath remodel cost in West Michigan in 2026? <span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">A fair Grand Rapids tub-to-shower conversion lands between $7,000 and $10,000 cash. A senior-safety walk-in shower runs $9,000&ndash;$13,500. Full master refreshes range $18,000&ndash;$32,000 depending on scope. Our full <a href="/cost-guide.html">2026 cost guide</a> has the breakdown.</div></div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q">Is this really 100% free for homeowners? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Yes. We&rsquo;re a contractor-matching service funded by the network of vetted bath contractors. There&rsquo;s no charge to the homeowner — ever. If anyone asks you for a fee, that&rsquo;s not us.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">How much should a bath remodel cost in West Michigan in 2026? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">A fair Grand Rapids tub-to-shower conversion lands between $7,000 and $10,000 cash. A senior-safety walk-in shower runs $9,000–$13,500. Full master refreshes range $18,000–$32,000 depending on scope. Our full <a href="/cost-guide.html">2026 cost guide</a> has the breakdown.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">What does West Michigan Bath Audit actually do? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">We&rsquo;re a local contractor-matching service. When you submit the form, we share your project with up to three vetted West Michigan bath contractors who fit your scope and zip. They each contact you with a quote. We don&rsquo;t install, we don&rsquo;t visit your home, and we don&rsquo;t take a cut of any quote — contractors pay us a flat fee for the match, regardless of project size.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">What does &ldquo;vetted&rdquo; actually mean? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Before a contractor joins our network, we check their current Michigan license, their insurance, their Google review count and rating, and that they&rsquo;ll itemize labor vs. materials on every quote. We re-check the basics annually and pull contractors that homeowners tell us aren&rsquo;t treating them well.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Can a bath conversion really be done in one day? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Yes for most standard tub-to-shower conversions and liner installs. Contractors use pre-fabricated acrylic systems measured, ordered, and installed in a single visit. More complex custom work may take an extra day — the contractor you pick will be upfront about timeline before any work begins.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Do you handle financing options? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Most network contractors offer financing through partners like GreenSky, Synchrony, or Hearth — typically 12–120 month terms with promotional 0% periods available for qualified buyers. We break down the options on our <a href="/financing.html">financing page</a>.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">What if I already have a quote from another company? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Submit the form anyway. The point of getting up to three quotes is the comparison — you&rsquo;ll be able to put your existing quote next to two more from vetted local contractors and see where it lands. Our <a href="/cost-guide.html">2026 cost guide</a> also tells you the fair-market range for common scopes.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Is this a good option for seniors or those with mobility concerns? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Yes. Many network contractors specialize in walk-in shower conversions with low or zero-threshold entries, built-in grab bars, and slip-resistant flooring. When you submit, select &ldquo;Unsafe for seniors&rdquo; and we&rsquo;ll match you with contractors who do this work often.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">How does the quote process work? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">After you submit, we share your project with up to three vetted local contractors who fit your scope, geography, and project type. Each one reaches out with a quote within 24 hours. You compare the quotes and pick the team you trust most — or walk away. Three honest options. No bidding war. No pressure.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">What if I don&rsquo;t like any of the contractors? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Tell us. We&rsquo;ll pull them and connect you with the next set of contractors in our network. Our reputation depends on the homeowner experience, not on any single match closing.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">How fast do contractors contact me? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Within 24 hours of submitting the form — almost always faster. If something delays a response, our team will reach out personally.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">What areas do you cover? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">All of West Michigan: Grand Rapids metro, Holland, Grand Haven, Muskegon, Rockford, Forest Hills, Ada, Caledonia, Hudsonville, Zeeland, and surrounding communities. If you&rsquo;re outside the area, submit the form and we&rsquo;ll let you know if we can match you.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Do you share my information with anyone else? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Only with the up to three vetted contractors we match you with. We don&rsquo;t sell leads to third-party aggregators, we don&rsquo;t send your info to call centers, and we don&rsquo;t add you to a marketing list. Full details in our <a href="/privacy-policy.html">privacy policy</a>.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Who&rsquo;s behind West Michigan Bath Audit? <span class="faq-icon">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">A small West Michigan team that vets local bath contractors and matches them with homeowners — up to three at a time, never wider. We&rsquo;re local, we don&rsquo;t install, and we answer to the homeowners we serve.</div></div>
+        </div>
       </div>
-      <div class="faq-item">
-        <button class="faq-q">Can a bath conversion really be done in one day? <span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Yes for most standard tub-to-shower conversions and liner installs. Contractors use pre-fabricated acrylic systems measured, ordered, and installed in a single visit. More complex custom work may take an extra day &mdash; the contractor you pick will be upfront about timeline before any work begins.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Do you handle financing options? <span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Most network contractors offer financing through partners like GreenSky, Synchrony, or Hearth &mdash; typically 12&ndash;120 month terms with promotional 0% periods available for qualified buyers. We break down the options on our <a href="/financing.html">financing page</a>.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">What if I already have a quote from another company? <span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Perfect. Many homeowners use our independent audit as a second opinion &mdash; to verify the quote covers the right scope, uses quality materials, and isn&rsquo;t padding the price. Bring the existing quote to your audit and our auditor will walk through it with you line by line.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Is this a good option for seniors or those with mobility concerns? <span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Absolutely. Walk-in shower conversions with low or zero-threshold entries, built-in grab bars, and slip-resistant flooring are one of our most common projects. Many network contractors are certified in accessible bath design and can work within ADA guidelines.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">How does the quote process work? <span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">After your audit, we share your project with up to three verified local contractors who fit your scope, geography, and project type. Each one reaches out with a quote within 24 hours. You compare the quotes against our audit summary and pick the team you trust most &mdash; or walk away. Three honest options. No bidding war. No pressure.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">What if I don&rsquo;t like any of the contractors? <span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Tell us. We&rsquo;ll pull them and connect you with the next set of contractors in our network. Our reputation depends on the homeowner experience, not on any single match closing.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">How fast do contractors contact me? <span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Within 24 hours of submitting the form &mdash; almost always faster. If something delays a response, our team will reach out personally.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">What areas do you cover? <span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">All of West Michigan: Grand Rapids metro, Holland, Grand Haven, Muskegon, Rockford, Forest Hills, Ada, Caledonia, Hudsonville, Zeeland, and surrounding communities. If you&rsquo;re outside the area, submit the form and we&rsquo;ll let you know if we can match you.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Do you share my information with anyone else? <span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Only with the up to three verified contractors we connect you with so they can quote your project. We don&rsquo;t sell leads to third-party lead aggregators, we don&rsquo;t send your info to call centers, and we don&rsquo;t put you on a marketing list.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q">Who&rsquo;s behind West Michigan Bath Audit? <span class="faq-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">A small West Michigan team built around one principle: homeowners deserve a fair second opinion before signing a remodel contract. We&rsquo;re local, independent, and answerable to the homeowners we serve.</div></div>
-      </div>
+      <p class="faq-footnote">Researching prices first? <a href="/cost-guide.html">Read the 2026 cost guide &rarr;</a></p>
     </div>
-    <p style="text-align:center; margin-top: 32px; font-size: 0.94rem; color: var(--ink-soft);">
-      Researching prices first? &nbsp;<a href="/cost-guide.html" style="color: var(--teal); font-weight: 700;">Read the 2026 cost guide &rarr;</a>
-    </p>
   </section>
 
   <!-- BOTTOM FORM -->
-  <section class="form-section" id="form">
-    <p class="section-label">Book your free audit</p>
-    <h2>One form. Three quotes. Your decision.</h2>
-    <p class="section-sub">Limited slots open in the Grand Rapids metro area. Auditors fill up fast.</p>
-
-    <div class="bottom-form-wrap">
-      <div class="form-header">
-        <span class="form-header-dot"></span>
-        <p>Accepting audit requests now</p>
+  <section class="brand form-section" id="form">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">08 · Get matched</p>
+          <h2>One form. Up to three quotes. <em>Your decision.</em></h2>
+        </div>
+        <p class="blurb">Accepting requests in the Grand Rapids metro and surrounding West Michigan communities. Most homeowners hear from us the same day.</p>
       </div>
-      <form id="bottom-form" method="POST">
-        <input type="hidden" name="lead_id" id="bottom-lead-id" />
-        <input type="hidden" name="city" id="bottom-city" />
-        <div class="form-group">
-          <label for="b-zip">Zip code</label>
-          <input type="text" id="b-zip" name="zip" placeholder="49503" required inputmode="numeric" maxlength="5" />
-        </div>
-        <div class="form-group">
-          <label for="b-bath-condition">What&rsquo;s the current state of your bath?</label>
-          <select id="b-bath-condition" name="bath_condition">
-            <option value="" disabled selected>Select an option</option>
-            <option value="Old/Dated">Old or dated</option>
-            <option value="Leaking/Water Damage">Leaking or water damage</option>
-            <option value="Unsafe for Seniors">Unsafe for seniors</option>
-            <option value="Just Want an Upgrade">Just want an upgrade</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="b-name">Full name</label>
-          <input type="text" id="b-name" name="name" placeholder="John Smith" required autocomplete="name" />
-        </div>
-        <div class="form-group">
-          <label for="b-phone">Mobile phone <span style="font-weight:400;color:var(--ink-light);">(contractors reach you here)</span></label>
-          <input type="tel" id="b-phone" name="phone" placeholder="(616) 555-0000" required autocomplete="tel" />
-        </div>
-        <div class="form-group">
-          <label for="b-email">Email <span style="font-weight:400;color:var(--ink-light);">(optional)</span></label>
-          <input type="email" id="b-email" name="email" placeholder="john@example.com" autocomplete="email" />
-        </div>
-        <button type="submit" class="btn-submit">Book my free audit</button>
-        <p class="form-disclaimer">By submitting, you agree to be contacted by West Michigan Bath Audit and up to three verified bath contractors about your project. We do not sell your information to third-party lead aggregators.</p>
-      </form>
+
+      <div class="bottom-form-wrap">
+        <p class="form-eyebrow"><span class="dot"></span>Accepting requests</p>
+        <h3 class="form-title">Free contractor match.</h3>
+        <p class="form-sub">About 60 seconds. We never sell your info to third-party lead aggregators.</p>
+
+        <form id="bottom-form" method="POST">
+          <input type="hidden" name="lead_id" id="bottom-lead-id" />
+          <input type="hidden" name="city" id="bottom-city" />
+          <div class="form-group">
+            <label for="b-zip">Zip code</label>
+            <input type="text" id="b-zip" name="zip" placeholder="49503" required inputmode="numeric" maxlength="5" />
+          </div>
+          <div class="form-group">
+            <label for="b-bath-condition">Current state of bath</label>
+            <select id="b-bath-condition" name="bath_condition">
+              <option value="" disabled selected>Select an option</option>
+              <option value="Old/Dated">Old or dated</option>
+              <option value="Leaking/Water Damage">Leaking or water damage</option>
+              <option value="Unsafe for Seniors">Unsafe for seniors</option>
+              <option value="Just Want an Upgrade">Just want an upgrade</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="b-name">Full name</label>
+            <input type="text" id="b-name" name="name" placeholder="John Smith" required autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label for="b-phone">Mobile phone <span class="hint">(contractors reach you here)</span></label>
+            <input type="tel" id="b-phone" name="phone" placeholder="(616) 555-0000" required autocomplete="tel" />
+          </div>
+          <div class="form-group">
+            <label for="b-email">Email <span class="hint">(optional)</span></label>
+            <input type="email" id="b-email" name="email" placeholder="john@example.com" autocomplete="email" />
+          </div>
+          <button type="submit" class="btn-submit">Match me with contractors</button>
+          <p class="form-disclaimer">By submitting, you agree to be contacted by West Michigan Bath Audit and up to three vetted bath contractors about your project. We do not sell your info to third-party lead aggregators.</p>
+        </form>
+      </div>
       <div id="bottom-success">
-        You&rsquo;re in the queue.<br>
-        <span style="font-weight:400;color:var(--ink-soft);">Contractors will reach out within 24 hours.</span>
+        <p class="tag">You&rsquo;re in the queue</p>
+        Contractors will reach out within 24 hours.
+        <span class="sub">If something delays a response, our team will reach out personally.</span>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer>
-    <div class="footer-links">
-      <a href="/">Home</a>
-      <a href="/process.html">How it works</a>
-      <a href="/cost-guide.html">Cost guide</a>
-      <a href="/financing.html">Financing</a>
-      <a href="/privacy-policy.html">Privacy</a>
+  <footer class="site">
+    <div class="row">
+      <div class="mark">
+        <svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" aria-label="WBA — West Michigan Bath Audit">
+          <g transform="translate(360, 80)">
+            <circle cx="0" cy="0" r="52" fill="none" stroke="#FAF7F2" stroke-width="2.4"/>
+            <line x1="-36" y1="0" x2="36" y2="0" stroke="#FAF7F2" stroke-width="2.4" stroke-linecap="round"/>
+            <circle cx="24" cy="-24" r="4.4" fill="#D4B584"/>
+          </g>
+          <text x="360" y="220" text-anchor="middle" font-family="Fraunces, serif" font-weight="400" font-size="88" fill="#FAF7F2" letter-spacing="-0.02em" style="font-variation-settings: 'opsz' 144, 'SOFT' 40;">WBA<tspan fill="#D4B584">.</tspan></text>
+          <line x1="280" y1="244" x2="440" y2="244" stroke="#D4B584" stroke-width="1.2" opacity="0.75"/>
+          <text x="360" y="278" text-anchor="middle" font-family="Manrope, sans-serif" font-weight="300" font-size="13" fill="#FAF7F2" letter-spacing="0.42em">WEST · MICHIGAN · BATH · AUDIT</text>
+        </svg>
+      </div>
+      <div class="col-r">
+        <div class="nav">
+          <a href="/">Home</a>
+          <a href="/process.html">How it works</a>
+          <a href="/cost-guide.html">2026 cost guide</a>
+          <a href="/financing.html">Financing</a>
+          <a href="/privacy-policy.html">Privacy</a>
+        </div>
+        <div class="info">
+          Grand Rapids, MI<br/>
+          <a href="tel:+16163259505">(616) 325-9505</a><br/>
+          <a href="mailto:info@westmichiganbathaudit.com">info@westmichiganbathaudit.com</a>
+        </div>
+      </div>
+      <p class="fine">
+        &copy; 2026 West Michigan Bath Audit <span class="brass">·</span> A local contractor-matching service for West Michigan homeowners. <span class="brass">·</span> Free for homeowners. Funded by the contractor network.
+      </p>
     </div>
-    <p>&copy; 2026 West Michigan Bath Audit &middot; Independent bath remodel audits</p>
-    <p>Grand Rapids, MI &nbsp;|&nbsp; <a href="tel:+16163259505">(616) 325-9505</a> &nbsp;|&nbsp; <a href="mailto:info@westmichiganbathaudit.com">info@westmichiganbathaudit.com</a></p>
-    <p style="margin-top:6px;color:var(--ink-light);font-size:0.74rem;">Free audit subject to availability in your area. West Michigan Bath Audit is an independent verification and referral service.</p>
   </footer>
 
   <!-- STICKY MOBILE CTA -->
   <div class="sticky-cta">
-    <a href="#form">Book my free audit &rarr;</a>
+    <a href="#form">Match me with contractors</a>
   </div>
 
   <!-- EXIT POPUP -->
   <div class="popup-overlay" id="exit-popup">
     <div class="popup-box">
-      <button class="popup-close" id="popup-close">&times;</button>
-      <div class="popup-badge">Before you go</div>
-      <h3>Get the 2026 West Michigan cost guide.</h3>
-      <p>Median prices for every common bath scope, the five red flags in any quote, and what to ask every contractor before you sign. Free. No spam.</p>
+      <button class="popup-close" id="popup-close" aria-label="Close">×</button>
+      <p class="popup-eyebrow">Before you go</p>
+      <h3>Get the 2026 <em>West Michigan</em> cost guide.</h3>
+      <p class="popup-desc">Median prices for every common bath scope, the five red flags in any quote, and what to ask every contractor before you sign. Free. No spam.</p>
 
       <form id="popup-form" method="POST">
         <input type="hidden" name="lead_id" id="popup-lead-id" />
@@ -1276,12 +1302,8 @@
   </div>
 
   <script>
-    // ── BACKEND ENDPOINT CONFIG ──
-    // Change this once after `wrangler deploy` returns your Worker URL.
-    // The Worker exposes POST /lead (real submissions) and POST /partial (abandonment).
     const WBA_BACKEND = 'https://wba-backend.kadenelzinga.workers.dev';
 
-    // ── VISITOR ID (persists across sessions) ──
     const LS = {
       vid: 'wmba_visitor_id',
       visits: 'wmba_visit_count',
@@ -1305,13 +1327,11 @@
     localStorage.setItem(LS.visits, String(visitCount));
     localStorage.setItem(LS.lastSeen, new Date().toISOString());
 
-    // ── WIRE FORM ACTIONS TO BACKEND ──
     ['hero-form', 'bottom-form', 'popup-form'].forEach(function(id) {
       const f = document.getElementById(id);
       if (f) f.action = WBA_BACKEND + '/lead';
     });
 
-    // ── ENGAGEMENT TRACKING ──
     const sessionStart = Date.now();
     let scrollDepthMax = 0;
     let faqOpens = 0;
@@ -1342,7 +1362,6 @@
       if (sec >= 120 && !timeEventsFired.t120) { timeEventsFired.t120 = true; fbq('trackCustom', 'WBA_Time120'); }
     }, 5000);
 
-    // ── LEAD ID & ZIP LOOKUP ──
     function generateLeadId() {
       const ts = Date.now().toString(36).toUpperCase();
       const rand = Math.random().toString(36).substring(2, 7).toUpperCase();
@@ -1371,7 +1390,6 @@
     attachZipLookup('b-zip', 'bottom-city');
     attachZipLookup('p-zip', 'popup-city');
 
-    // ── FORM CACHE: pre-fill on return, save on every keystroke ──
     const FORM_FIELDS = [
       ['h-zip', 'h-name', 'h-phone', 'h-bath-condition'],
       ['b-zip', 'b-name', 'b-phone', 'b-bath-condition', 'b-email'],
@@ -1413,7 +1431,6 @@
 
     loadFormCache();
 
-    // ── FORM ABANDONMENT CAPTURE ──
     function getFormPartialData(formId) {
       const form = document.getElementById(formId);
       if (!form) return null;
@@ -1475,7 +1492,6 @@
       sendPartial('popup-form');
     });
 
-    // ── ENGAGEMENT SIGNALS attached to every submission ──
     function attachEngagement(fd) {
       const timeOnPage = Math.round((Date.now() - sessionStart) / 1000);
       fd.append('visitor_id', visitorId);
@@ -1523,7 +1539,6 @@
     handleForm('bottom-form', 'bottom-success');
     handleForm('popup-form', 'popup-success');
 
-    // Smooth scroll
     document.querySelectorAll('a[href="#form"]').forEach(a => {
       a.addEventListener('click', e => {
         e.preventDefault();
@@ -1531,7 +1546,6 @@
       });
     });
 
-    // FAQ accordion
     document.querySelectorAll('.faq-q').forEach(btn => {
       btn.addEventListener('click', () => {
         const item = btn.closest('.faq-item');
@@ -1545,7 +1559,6 @@
       });
     });
 
-    // Exit intent popup
     const popup = document.getElementById('exit-popup');
     let popupShown = false;
 

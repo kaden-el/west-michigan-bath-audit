@@ -5,136 +5,271 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bath Remodel Financing | West Michigan Bath Audit</title>
   <meta name="description" content="What you actually need to know about financing a bath remodel in West Michigan. Real payment ranges, lender comparisons, and what to ask before you sign." />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231F4D5A'/%3E%3Cpath d='M16 36c0-3 2-5 5-5h22c3 0 5 2 5 5v6c0 3-2 5-5 5H21c-3 0-5-2-5-5z' fill='%23FAF7F2'/%3E%3Cpath d='M22 31V22c0-3 2-5 5-5h10c3 0 5 2 5 5v9' fill='none' stroke='%23FAF7F2' stroke-width='2.5'/%3E%3C/svg%3E" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='5' fill='%231F4D5A'/><g transform='translate(16,16)'><circle r='10' fill='none' stroke='%23FAF7F2' stroke-width='1.6'/><line x1='-6.5' y1='0' x2='6.5' y2='0' stroke='%23FAF7F2' stroke-width='1.6' stroke-linecap='round'/><circle cx='4.5' cy='-4.5' r='1.6' fill='%23D4B584'/></g></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=Manrope:wght@200..800&family=JetBrains+Mono:wght@300..600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/wba-brand.css" />
+
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --teal: #1F4D5A; --teal-dark: #163844; --teal-soft: #2A6577;
-      --cream: #FAF7F2; --cream-warm: #F4EFE5;
-      --brass: #B08D57; --brass-dark: #8E7144;
-      --ink: #1A1A1A; --ink-soft: #4A4A4A; --ink-light: #7A7A7A;
-      --line: #E8E1D5; --white: #FFFFFF; --radius: 10px;
-    }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      color: var(--ink); background: var(--cream); line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-    a { color: var(--teal); }
-    header {
-      background: var(--cream); border-bottom: 1px solid var(--line);
-      padding: 16px 24px; display: flex; align-items: center; justify-content: space-between;
-    }
-    .logo { color: var(--ink); font-size: 1.05rem; font-weight: 800; }
-    .logo a { color: inherit; text-decoration: none; }
-    .logo span { color: var(--teal); }
-    .logo sub {
-      display: block; font-size: 0.6rem; font-weight: 600;
-      letter-spacing: 0.16em; text-transform: uppercase;
-      color: var(--ink-light); margin-top: -2px;
-    }
-    .header-right { display: flex; align-items: center; gap: 14px; }
-    .header-phone { color: var(--ink); font-weight: 700; font-size: 0.9rem; text-decoration: none; }
-    .call-link {
-      background: var(--teal); color: var(--cream); font-weight: 700; font-size: 0.85rem;
-      text-decoration: none; padding: 9px 18px; border-radius: var(--radius);
-    }
-    @media (max-width: 480px) { .header-phone { display: none; } }
-
     .page-hero {
-      background: linear-gradient(165deg, var(--teal) 0%, var(--teal-dark) 100%);
-      color: var(--cream); padding: 64px 24px 72px; text-align: center;
+      background: var(--teal);
+      color: var(--cream);
+      padding: 88px var(--pad-x);
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--rule);
     }
-    .page-hero .eyebrow {
-      display: inline-block; font-size: 0.74rem; font-weight: 700;
-      letter-spacing: 0.18em; text-transform: uppercase; color: var(--brass);
-      margin-bottom: 14px;
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      width: 480px; height: 480px;
+      background: radial-gradient(circle at 50% 50%, rgba(212,181,132,0.07) 0%, transparent 60%);
+      transform: translate(35%, -35%);
+      pointer-events: none;
     }
-    .page-hero h1 {
-      font-size: clamp(2rem, 4.5vw, 2.8rem); font-weight: 800;
-      letter-spacing: -0.025em; line-height: 1.15; max-width: 720px; margin: 0 auto 16px;
-    }
-    .page-hero p { color: rgba(250,247,242,0.78); font-size: 1.08rem; max-width: 600px; margin: 0 auto; }
+    .page-hero .wrap { position: relative; }
+    .page-hero .eyebrow { color: var(--brass-light); margin-bottom: 24px; }
+    .page-hero .eyebrow::before { background: var(--brass-light); }
+    .page-hero h1 { color: var(--cream); max-width: 880px; margin-bottom: 24px; }
+    .page-hero h1 em { color: var(--brass-light); font-style: italic; }
+    .page-hero .lede { color: rgba(250,247,242,0.82); max-width: 680px; }
 
-    .content { max-width: 760px; margin: 0 auto; padding: 64px 24px; }
+    .content {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 88px var(--pad-x) 80px;
+    }
     .content h2 {
-      font-size: 1.55rem; font-weight: 800; letter-spacing: -0.02em;
-      margin: 48px 0 16px; color: var(--ink);
+      font-family: var(--serif);
+      color: var(--teal);
+      font-size: clamp(24px, 3vw, 34px);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin: 64px 0 22px;
+      font-variation-settings: 'opsz' 72, 'SOFT' 40;
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
     }
+    .content h2 em { font-style: italic; color: var(--brass); font-variation-settings: 'opsz' 72, 'SOFT' 90; }
     .content h2:first-child { margin-top: 0; }
-    .content h3 { font-size: 1.1rem; font-weight: 700; margin: 28px 0 10px; color: var(--ink); }
-    .content p { color: var(--ink-soft); margin-bottom: 16px; font-size: 1rem; }
-    .content ul { margin: 12px 0 18px 22px; color: var(--ink-soft); }
-    .content li { margin-bottom: 8px; font-size: 0.98rem; }
+    .content h2 .num {
+      font-family: var(--mono);
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      color: var(--brass);
+      text-transform: uppercase;
+      flex-shrink: 0;
+      padding-top: 4px;
+    }
+    .content h3 {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin: 32px 0 10px;
+      font-variation-settings: 'opsz' 36, 'SOFT' 40;
+    }
+    .content h3 .tag {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      color: var(--brass);
+      text-transform: uppercase;
+      margin-right: 12px;
+    }
+    .content p { color: var(--ink-soft); margin-bottom: 18px; font-size: 15.5px; line-height: 1.75; }
+    .content p a { color: var(--teal); border-bottom: 1px solid var(--brass); padding-bottom: 1px; text-decoration: none; }
+    .content ul { margin: 14px 0 22px 0; color: var(--ink-soft); padding-left: 0; list-style: none; }
+    .content ul li {
+      padding-left: 22px;
+      position: relative;
+      margin-bottom: 10px;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+    .content ul li::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--brass);
+      border-radius: 50%;
+      position: absolute;
+      left: 0; top: 11px;
+    }
+    .content li strong { color: var(--ink); font-weight: 500; }
 
-    table.payments {
-      width: 100%; border-collapse: collapse; margin: 16px 0 24px;
-      background: var(--white); border: 1.5px solid var(--line); border-radius: var(--radius); overflow: hidden;
+    .payments-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0 16px;
+      background: var(--cream);
+      border: 1px solid var(--rule);
+      font-family: var(--sans);
+      font-size: 14px;
     }
-    table.payments th, table.payments td {
-      padding: 12px 14px; text-align: left; font-size: 0.92rem;
-      border-bottom: 1px solid var(--line);
+    .payments-table th {
+      background: var(--cream-warm);
+      font-family: var(--mono);
+      font-weight: 400;
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      padding: 14px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--rule);
     }
-    table.payments th { background: var(--cream-warm); color: var(--ink); font-weight: 700; }
-    table.payments tr:last-child td { border-bottom: none; }
-    table.payments td:first-child { font-weight: 700; color: var(--ink); }
+    .payments-table td {
+      padding: 14px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .payments-table tr:last-child td { border-bottom: none; }
+    .payments-table td:first-child {
+      font-family: var(--serif);
+      font-size: 17px;
+      font-weight: 400;
+      color: var(--ink);
+      font-variation-settings: 'opsz' 36, 'SOFT' 40;
+    }
+    .payments-table td:not(:first-child) {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--teal);
+    }
+    .fine-note {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--ink-soft);
+      line-height: 1.6;
+      letter-spacing: 0.02em;
+      margin-bottom: 24px;
+    }
 
     .callout {
-      background: var(--cream-warm); border: 1.5px solid var(--brass);
-      border-radius: var(--radius); padding: 24px 26px; margin: 28px 0;
+      background: var(--cream-warm);
+      border: 1px solid var(--brass);
+      padding: 28px 32px;
+      margin: 36px 0;
+      position: relative;
     }
-    .callout strong { color: var(--ink); font-weight: 700; }
+    .callout::before, .callout::after {
+      content: '';
+      position: absolute;
+      width: 18px; height: 1px;
+      background: var(--brass);
+    }
+    .callout::before { top: -1px; left: -1px; }
+    .callout::after { bottom: -1px; right: -1px; }
+    .callout p { margin-bottom: 0; color: var(--ink-soft); }
+    .callout strong {
+      color: var(--ink);
+      font-style: italic;
+      font-weight: 500;
+      font-family: var(--serif);
+      font-size: 17px;
+      font-variation-settings: 'opsz' 24, 'SOFT' 80;
+    }
 
     .cta-block {
-      background: var(--teal); color: var(--cream); padding: 56px 24px; text-align: center;
+      background: var(--teal);
+      color: var(--cream);
+      padding: 88px var(--pad-x);
+      text-align: center;
+      border-top: 1px solid var(--rule);
     }
-    .cta-block h2 { color: var(--cream); font-size: 1.7rem; font-weight: 800; margin-bottom: 14px; }
-    .cta-block p { color: rgba(250,247,242,0.8); margin-bottom: 24px; }
-    .cta-block a {
-      display: inline-block; background: var(--brass); color: var(--ink);
-      padding: 14px 32px; border-radius: var(--radius); font-weight: 700;
-      text-decoration: none; font-size: 1rem;
+    .cta-block .eyebrow { color: var(--brass-light); margin-bottom: 22px; justify-content: center; display: inline-flex; }
+    .cta-block .eyebrow::before { background: var(--brass-light); }
+    .cta-block h2 { color: var(--cream); max-width: 640px; margin: 0 auto 16px; }
+    .cta-block h2 em { color: var(--brass-light); font-style: italic; }
+    .cta-block p {
+      color: rgba(250,247,242,0.78);
+      margin: 0 auto 32px;
+      max-width: 540px;
+      font-family: var(--serif);
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 1.55;
+      font-variation-settings: 'opsz' 36, 'SOFT' 20;
     }
-    .cta-block a:hover { background: var(--brass-dark); color: var(--cream); }
-
-    footer {
-      background: var(--ink); color: var(--ink-light); text-align: center;
-      padding: 32px 24px; font-size: 0.8rem; line-height: 1.85;
+    .cta-block a.btn {
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--teal);
+      background: var(--cream);
+      border: 1px solid var(--cream);
+      padding: 16px 28px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      transition: background 0.25s, color 0.25s;
     }
-    footer a { color: var(--cream); text-decoration: none; }
-    footer a:hover { color: var(--brass); }
-    .footer-links { margin-bottom: 8px; }
-    .footer-links a { margin: 0 10px; }
+    .cta-block a.btn::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--brass);
+      border-radius: 50%;
+    }
+    .cta-block a.btn:hover { background: var(--brass-light); border-color: var(--brass-light); color: var(--teal-deep); }
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <a href="/">West Michigan <span>Bath Audit</span></a>
-      <sub>Independent Bath Remodel Audits</sub>
-    </div>
-    <div class="header-right">
-      <a class="header-phone" href="tel:+16163259505">(616) 325-9505</a>
-      <a class="call-link" href="/#form">Get Free Audit</a>
+
+  <header class="site">
+    <div class="row">
+      <a class="site-logo" href="/" aria-label="West Michigan Bath Audit">
+        <svg viewBox="0 0 620 110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <g transform="translate(50, 55)">
+            <circle class="wba-mark-stroke" cx="0" cy="0" r="30" fill="none" stroke="#1F4D5A" stroke-width="2"/>
+            <line class="wba-mark-stroke" x1="-20" y1="0" x2="20" y2="0" stroke="#1F4D5A" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="13" cy="-13" r="3" fill="#B08D57"/>
+          </g>
+          <line x1="105" y1="28" x2="105" y2="82" stroke="#B08D57" stroke-width="1" opacity="0.55"/>
+          <text x="125" y="58" font-family="Fraunces, serif" font-weight="400" font-size="38" fill="#1F4D5A" letter-spacing="-0.02em" style="font-variation-settings: 'opsz' 96, 'SOFT' 40;">WBA<tspan fill="#B08D57">.</tspan></text>
+          <text x="125" y="80" font-family="Manrope, sans-serif" font-weight="300" font-size="9" fill="#1A1A1A" letter-spacing="0.42em">WEST · MICHIGAN · BATH · AUDIT</text>
+        </svg>
+      </a>
+      <nav class="site-nav">
+        <a class="nav-link" href="/process.html">Process</a>
+        <a class="nav-link" href="/cost-guide.html">Cost guide</a>
+        <a class="tel" href="tel:+16163259505">(616) 325-9505</a>
+        <a class="call-link" href="/#form">Get matched</a>
+      </nav>
     </div>
   </header>
 
   <section class="page-hero">
-    <span class="eyebrow">Financing</span>
-    <h1>How West Michigan homeowners pay for a bath remodel.</h1>
-    <p>The lenders, the rates, the monthly numbers, and the questions that save you from a bad financing pitch.</p>
+    <div class="wrap">
+      <p class="eyebrow">Financing</p>
+      <h1>How West Michigan homeowners <em>pay</em> for a bath remodel.</h1>
+      <p class="lede">The lenders, the rates, the monthly numbers, and the questions that save you from a bad financing pitch.</p>
+    </div>
   </section>
 
   <main class="content">
-    <h2>The short version</h2>
-    <p>Most West Michigan bath remodels get paid with one of four things: cash, a home-equity line, a manufacturer-tied financing program (GreenSky, Synchrony, Hearth), or a personal loan from a regional bank or credit union. Each has a real trade-off. The right choice depends less on your contractor and more on what rate you can actually get approved for &mdash; which is mostly about your credit score and how long you want to be making the payment.</p>
+    <h2><span class="num">00</span>The short version</h2>
+    <p>Most West Michigan bath remodels get paid with one of four things: cash, a home-equity line, a manufacturer-tied financing program (GreenSky, Synchrony, Hearth), or a personal loan from a regional bank or credit union. Each has a real trade-off. The right choice depends less on your contractor and more on what rate you can actually get approved for — which is mostly about your credit score and how long you want to be making the payment.</p>
 
-    <h2>Typical monthly payments at common project sizes</h2>
-    <p>These are 84-month (7-year) payments at three credit-score bands, assuming the entire project is financed. Real terms vary by lender and promotional period &mdash; many specialists offer 0% intro periods for 12&ndash;24 months.</p>
+    <h2><span class="num">01</span>Typical <em>monthly</em> payments at common project sizes</h2>
+    <p>These are 84-month (7-year) payments at three credit-score bands, assuming the entire project is financed. Real terms vary by lender and promotional period — many specialists offer 0% intro periods for 12–24 months.</p>
 
-    <table class="payments">
+    <table class="payments-table">
       <thead>
-        <tr><th>Project total</th><th>Excellent credit (~6.99%)</th><th>Good credit (~10.99%)</th><th>Fair credit (~16.99%)</th></tr>
+        <tr>
+          <th>Project total</th>
+          <th>Excellent (~6.99%)</th>
+          <th>Good (~10.99%)</th>
+          <th>Fair (~16.99%)</th>
+        </tr>
       </thead>
       <tbody>
         <tr><td>$8,000</td><td>~$121/mo</td><td>~$135/mo</td><td>~$159/mo</td></tr>
@@ -143,70 +278,93 @@
         <tr><td>$25,000</td><td>~$378/mo</td><td>~$422/mo</td><td>~$497/mo</td></tr>
       </tbody>
     </table>
+    <p class="fine-note">Illustrative only — your actual rate and payment depend on your credit, the lender, and any promotional terms in effect at quote time. Always verify the APR, the promotional-period length, and whether deferred interest accrues if you don&rsquo;t pay off in the promo window.</p>
 
-    <p style="font-size:0.86rem;color:var(--ink-light);font-style:italic;">Illustrative only &mdash; your actual rate and payment depend on your credit, the lender, and any promotional terms in effect at quote time. Always verify the APR, the promotional-period length, and whether deferred interest accrues if you don&rsquo;t pay off in the promo window.</p>
+    <h2><span class="num">02</span>The four main options, <em>ranked</em> by what we usually see</h2>
 
-    <h2>The four main options, ranked by what we usually see</h2>
+    <h3><span class="tag">01 ·</span>Contractor-tied financing</h3>
+    <p>(GreenSky, Synchrony, Hearth, Wisetack.) The fastest path. Your specialist already has these set up. You apply at quote time, get approved in minutes, and the lender pays the contractor directly. Promotional 0% periods of 12–24 months are common, sometimes 60+ months with reduced-APR programs. The catch: if you don&rsquo;t pay off the balance in the promo window, deferred interest can hit retroactively. Read that line carefully.</p>
 
-    <h3>1. Contractor-tied financing (GreenSky, Synchrony, Hearth, Wisetack)</h3>
-    <p>The fastest path. Your specialist already has these set up. You apply at quote time, get approved in minutes, and the lender pays the contractor directly. Promotional 0% periods of 12&ndash;24 months are common, sometimes 60+ months with reduced-APR programs. The catch: if you don&rsquo;t pay off the balance in the promo window, deferred interest can hit retroactively. Read that line carefully.</p>
+    <h3><span class="tag">02 ·</span>Home Equity Line of Credit (HELOC)</h3>
+    <p>Through a regional bank or credit union. Lake Michigan Credit Union, Mercantile Bank, Independent Bank, and Consumers Credit Union all offer HELOCs in West Michigan. Rates run prime + a small margin (currently around 8–10% variable). Best fit if you have meaningful equity, plan to do more home projects, and want the lowest long-term cost. Slower to close than contractor financing — typically 2–4 weeks.</p>
 
-    <h3>2. Home Equity Line of Credit (HELOC) through a regional bank or credit union</h3>
-    <p>Lake Michigan Credit Union, Mercantile Bank, Independent Bank, and Consumers Credit Union all offer HELOCs in West Michigan. Rates run prime + a small margin (currently around 8&ndash;10% variable). Best fit if you have meaningful equity, plan to do more home projects, and want the lowest long-term cost. Slower to close than contractor financing &mdash; typically 2&ndash;4 weeks.</p>
+    <h3><span class="tag">03 ·</span>Personal loan or signature line</h3>
+    <p>From your bank or credit union. Unsecured, fixed rate, fixed term. Easier to qualify for than a HELOC, faster than a HELOC, but the APR is usually higher than a HELOC and longer than a 0% promo. Best fit if you don&rsquo;t have home equity or don&rsquo;t want to put your home up as collateral.</p>
 
-    <h3>3. Personal loan or signature line from your bank</h3>
-    <p>Unsecured, fixed rate, fixed term. Easier to qualify for than a HELOC, faster than a HELOC, but the APR is usually higher than a HELOC and longer than a 0% promo. Best fit if you don&rsquo;t have home equity or don&rsquo;t want to put your home up as collateral.</p>
+    <h3><span class="tag">04 ·</span>Cash</h3>
+    <p>Always the cheapest. If the project is a $7–10k tub-to-shower and you have the cash, just pay cash — you&rsquo;ll save the financing costs and you&rsquo;ll get a stronger price from many contractors who&rsquo;d otherwise pay the lender a 3–7% origination fee.</p>
 
-    <h3>4. Cash</h3>
-    <p>Always the cheapest. If the project is a $7&ndash;10k tub-to-shower and you have the cash, just pay cash &mdash; you&rsquo;ll save the financing costs and you&rsquo;ll get a stronger price from many contractors who&rsquo;d otherwise pay the lender a 3&ndash;7% origination fee.</p>
-
-    <h2>Five questions to ask before signing any financing offer</h2>
+    <h2><span class="num">03</span>Five questions to ask <em>before</em> signing any financing offer</h2>
     <ul>
-      <li><strong>What is the APR after the promotional period ends?</strong> Some 0% offers convert to 27&ndash;29% APR.</li>
+      <li><strong>What is the APR after the promotional period ends?</strong> Some 0% offers convert to 27–29% APR.</li>
       <li><strong>Is interest deferred or accruing during the promo period?</strong> Deferred interest can compound retroactively if you carry a balance past the promo end.</li>
-      <li><strong>What origination fee or discount does the contractor pay the lender?</strong> If it&rsquo;s 5&ndash;7%, ask if you&rsquo;d get a cash discount instead.</li>
+      <li><strong>What origination fee or discount does the contractor pay the lender?</strong> If it&rsquo;s 5–7%, ask if you&rsquo;d get a cash discount instead.</li>
       <li><strong>Is the loan secured by my home?</strong> Most contractor-tied financing is unsecured; HELOCs are secured. Know which one you&rsquo;re signing.</li>
       <li><strong>What&rsquo;s the prepayment penalty?</strong> Most modern home-improvement loans have none, but verify in writing.</li>
     </ul>
 
     <div class="callout">
-      <p><strong>A note on the audit.</strong> When we run a West Michigan Bath Audit, we don&rsquo;t take a cut of any financing arrangement. We don&rsquo;t earn more when you choose a higher-rate option. We&rsquo;ll review the financing terms in any quote you receive and flag anything we&rsquo;d push back on.</p>
+      <p><strong>A note on the match.</strong> When we match you with contractors, we don&rsquo;t take a cut of their financing arrangements. We don&rsquo;t earn more when you choose a higher-rate option. The fee contractors pay us is flat regardless of project size or financing path.</p>
     </div>
 
-    <h2>When financing is the wrong answer</h2>
-    <p>If the quote you&rsquo;re looking at is $4&ndash;5k over the fair-market range, financing it just spreads a bad price across 84 months. The audit catches this. We&rsquo;d rather you get a fair quote and pay cash than finance an overpriced project at 0% intro.</p>
+    <h2><span class="num">04</span>When financing is the <em>wrong</em> answer</h2>
+    <p>If the quote you&rsquo;re looking at is $4–5k over the fair-market range, financing it just spreads a bad price across 84 months. Comparing three independent quotes catches this. We&rsquo;d rather you get a fair quote and pay cash than finance an overpriced project at 0% intro.</p>
 
-    <h2>Frequently asked</h2>
+    <h2><span class="num">05</span>Frequently <em>asked</em></h2>
 
     <h3>Do I need to commit to a remodel before I get a financing decision?</h3>
     <p>No. Most lenders pre-qualify you with a soft credit pull. You&rsquo;ll know your rate and limit before you sign anything.</p>
 
     <h3>Will applying hurt my credit?</h3>
-    <p>Pre-qualification is a soft pull (no impact). Final application is a hard pull (small temporary impact, usually 3&ndash;5 points). Don&rsquo;t shop multiple lenders the same week unless you want the inquiries to stack.</p>
+    <p>Pre-qualification is a soft pull (no impact). Final application is a hard pull (small temporary impact, usually 3–5 points). Don&rsquo;t shop multiple lenders the same week unless you want the inquiries to stack.</p>
 
     <h3>Does my contractor see my credit?</h3>
     <p>The contractor sees whether you were approved and at what tier (rate bucket). They don&rsquo;t see your full credit report or score.</p>
 
     <h3>What credit score do I need?</h3>
-    <p>Contractor-tied financing usually opens up around 640. HELOCs typically want 680+. Excellent rates kick in around 740+. Below 640, options narrow &mdash; some specialists work with secondary lenders for lower scores, but the rates climb quickly.</p>
+    <p>Contractor-tied financing usually opens up around 640. HELOCs typically want 680+. Excellent rates kick in around 740+. Below 640, options narrow — some specialists work with secondary lenders for lower scores, but the rates climb quickly.</p>
   </main>
 
   <section class="cta-block">
-    <h2>Get the audit first.</h2>
-    <p>Know what your project should cost before you decide how to pay for it.</p>
-    <a href="/#form">Book my free audit</a>
+    <p class="eyebrow">Compare first, then finance</p>
+    <h2>Know what your project <em>should</em> cost first.</h2>
+    <p>Three independent quotes from vetted local contractors give you a fair-market benchmark before you sign anything — financed or cash.</p>
+    <a href="/#form" class="btn">Match me with contractors</a>
   </section>
 
-  <footer>
-    <div class="footer-links">
-      <a href="/">Home</a>
-      <a href="/process.html">How it works</a>
-      <a href="/cost-guide.html">Cost guide</a>
-      <a href="/financing.html">Financing</a>
-      <a href="/privacy-policy.html">Privacy</a>
+  <footer class="site">
+    <div class="row">
+      <div class="mark">
+        <svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" aria-label="WBA — West Michigan Bath Audit">
+          <g transform="translate(360, 80)">
+            <circle cx="0" cy="0" r="52" fill="none" stroke="#FAF7F2" stroke-width="2.4"/>
+            <line x1="-36" y1="0" x2="36" y2="0" stroke="#FAF7F2" stroke-width="2.4" stroke-linecap="round"/>
+            <circle cx="24" cy="-24" r="4.4" fill="#D4B584"/>
+          </g>
+          <text x="360" y="220" text-anchor="middle" font-family="Fraunces, serif" font-weight="400" font-size="88" fill="#FAF7F2" letter-spacing="-0.02em" style="font-variation-settings: 'opsz' 144, 'SOFT' 40;">WBA<tspan fill="#D4B584">.</tspan></text>
+          <line x1="280" y1="244" x2="440" y2="244" stroke="#D4B584" stroke-width="1.2" opacity="0.75"/>
+          <text x="360" y="278" text-anchor="middle" font-family="Manrope, sans-serif" font-weight="300" font-size="13" fill="#FAF7F2" letter-spacing="0.42em">WEST · MICHIGAN · BATH · AUDIT</text>
+        </svg>
+      </div>
+      <div class="col-r">
+        <div class="nav">
+          <a href="/">Home</a>
+          <a href="/process.html">How it works</a>
+          <a href="/cost-guide.html">2026 cost guide</a>
+          <a href="/financing.html">Financing</a>
+          <a href="/privacy-policy.html">Privacy</a>
+        </div>
+        <div class="info">
+          Grand Rapids, MI<br/>
+          <a href="tel:+16163259505">(616) 325-9505</a><br/>
+          <a href="mailto:info@westmichiganbathaudit.com">info@westmichiganbathaudit.com</a>
+        </div>
+      </div>
+      <p class="fine">
+        &copy; 2026 West Michigan Bath Audit <span class="brass">·</span> A local contractor-matching service for West Michigan homeowners. <span class="brass">·</span> Free for homeowners. Funded by the contractor network.
+      </p>
     </div>
-    <p>&copy; 2026 West Michigan Bath Audit &middot; Independent bath remodel audits</p>
-    <p>Grand Rapids, MI &nbsp;|&nbsp; <a href="tel:+16163259505">(616) 325-9505</a> &nbsp;|&nbsp; <a href="mailto:info@westmichiganbathaudit.com">info@westmichiganbathaudit.com</a></p>
   </footer>
+
 </body>
 </html>

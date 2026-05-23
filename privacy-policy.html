@@ -6,113 +6,164 @@
   <title>Privacy Policy | West Michigan Bath Audit</title>
   <meta name="description" content="How West Michigan Bath Audit collects, uses, and protects your information. SMS, email, and form-submission terms." />
   <meta name="robots" content="index, follow" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231F4D5A'/%3E%3Cpath d='M16 36c0-3 2-5 5-5h22c3 0 5 2 5 5v6c0 3-2 5-5 5H21c-3 0-5-2-5-5z' fill='%23FAF7F2'/%3E%3Cpath d='M22 31V22c0-3 2-5 5-5h10c3 0 5 2 5 5v9' fill='none' stroke='%23FAF7F2' stroke-width='2.5'/%3E%3C/svg%3E" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='5' fill='%231F4D5A'/><g transform='translate(16,16)'><circle r='10' fill='none' stroke='%23FAF7F2' stroke-width='1.6'/><line x1='-6.5' y1='0' x2='6.5' y2='0' stroke='%23FAF7F2' stroke-width='1.6' stroke-linecap='round'/><circle cx='4.5' cy='-4.5' r='1.6' fill='%23D4B584'/></g></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=Manrope:wght@200..800&family=JetBrains+Mono:wght@300..600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/wba-brand.css" />
+
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --teal: #1F4D5A; --teal-dark: #163844; --teal-soft: #2A6577;
-      --cream: #FAF7F2; --cream-warm: #F4EFE5;
-      --brass: #B08D57; --brass-dark: #8E7144;
-      --ink: #1A1A1A; --ink-soft: #4A4A4A; --ink-light: #7A7A7A;
-      --line: #E8E1D5; --white: #FFFFFF; --radius: 10px;
-    }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      color: var(--ink); background: var(--cream); line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-    a { color: var(--teal); }
-
-    header {
-      background: var(--cream); border-bottom: 1px solid var(--line);
-      padding: 16px 24px; display: flex; align-items: center; justify-content: space-between;
-    }
-    .logo { color: var(--ink); font-size: 1.05rem; font-weight: 800; letter-spacing: -0.01em; }
-    .logo a { color: inherit; text-decoration: none; }
-    .logo span { color: var(--teal); }
-    .logo sub {
-      display: block; font-size: 0.6rem; font-weight: 600;
-      letter-spacing: 0.16em; text-transform: uppercase;
-      color: var(--ink-light); margin-top: -2px;
-    }
-    .header-right { display: flex; align-items: center; gap: 14px; }
-    .header-phone { color: var(--ink); font-weight: 700; font-size: 0.9rem; text-decoration: none; }
-    .call-link {
-      background: var(--teal); color: var(--cream); font-weight: 700; font-size: 0.85rem;
-      text-decoration: none; padding: 9px 18px; border-radius: var(--radius);
-    }
-    @media (max-width: 480px) { .header-phone { display: none; } }
-
     .page-hero {
-      background: linear-gradient(165deg, var(--teal) 0%, var(--teal-dark) 100%);
-      color: var(--cream); padding: 56px 24px 64px; text-align: center;
+      background: var(--teal);
+      color: var(--cream);
+      padding: 72px var(--pad-x);
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--rule);
     }
-    .page-hero .eyebrow {
-      display: inline-block; font-size: 0.74rem; font-weight: 700;
-      letter-spacing: 0.18em; text-transform: uppercase; color: var(--brass);
-      margin-bottom: 14px;
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      width: 480px; height: 480px;
+      background: radial-gradient(circle at 50% 50%, rgba(212,181,132,0.07) 0%, transparent 60%);
+      transform: translate(35%, -35%);
+      pointer-events: none;
     }
+    .page-hero .wrap { position: relative; }
+    .page-hero .eyebrow { color: var(--brass-light); margin-bottom: 22px; }
+    .page-hero .eyebrow::before { background: var(--brass-light); }
     .page-hero h1 {
-      font-size: clamp(1.9rem, 4.2vw, 2.6rem); font-weight: 800;
-      letter-spacing: -0.025em; line-height: 1.15; max-width: 720px; margin: 0 auto 14px;
+      color: var(--cream);
+      max-width: 720px;
+      margin-bottom: 22px;
+      font-size: clamp(34px, 5vw, 56px);
     }
-    .page-hero p { color: rgba(250,247,242,0.78); font-size: 1rem; max-width: 600px; margin: 0 auto; }
-    .page-hero .effective { color: rgba(250,247,242,0.62); font-size: 0.82rem; margin-top: 18px; letter-spacing: 0.02em; }
+    .page-hero h1 em { color: var(--brass-light); font-style: italic; }
+    .page-hero .lede {
+      color: rgba(250,247,242,0.82);
+      max-width: 660px;
+      font-size: 17px;
+    }
+    .page-hero .effective {
+      margin-top: 24px;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(212,181,132,0.85);
+    }
+    .page-hero .effective span { color: rgba(250,247,242,0.55); margin-right: 10px; }
 
-    .content { max-width: 760px; margin: 0 auto; padding: 56px 24px; }
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 80px var(--pad-x) 64px;
+    }
     .content h2 {
-      font-size: 1.4rem; font-weight: 800; letter-spacing: -0.02em;
-      margin: 44px 0 14px; color: var(--ink);
+      font-family: var(--serif);
+      color: var(--teal);
+      font-size: 26px;
+      font-weight: 400;
+      letter-spacing: -0.015em;
+      line-height: 1.2;
+      margin: 56px 0 16px;
+      font-variation-settings: 'opsz' 48, 'SOFT' 40;
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
     }
     .content h2:first-child { margin-top: 0; }
-    .content h3 {
-      font-size: 1.05rem; font-weight: 700; margin: 24px 0 10px; color: var(--ink);
+    .content h2 .num {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      color: var(--brass);
+      text-transform: uppercase;
+      flex-shrink: 0;
+      padding-top: 3px;
     }
-    .content p { color: var(--ink-soft); margin-bottom: 14px; font-size: 0.98rem; }
-    .content ul { margin: 10px 0 16px 22px; color: var(--ink-soft); }
-    .content li { margin-bottom: 6px; font-size: 0.96rem; }
+    .content p { color: var(--ink-soft); margin-bottom: 16px; font-size: 15px; line-height: 1.75; }
+    .content p a { color: var(--teal); border-bottom: 1px solid var(--brass); padding-bottom: 1px; text-decoration: none; }
+    .content ul { margin: 12px 0 20px 0; color: var(--ink-soft); padding-left: 0; list-style: none; }
+    .content ul li {
+      padding-left: 22px;
+      position: relative;
+      margin-bottom: 10px;
+      font-size: 14.5px;
+      line-height: 1.7;
+    }
+    .content ul li::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--brass);
+      border-radius: 50%;
+      position: absolute;
+      left: 0; top: 11px;
+    }
+    .content li strong { color: var(--ink); font-weight: 500; }
 
     .callout {
-      background: var(--cream-warm); border: 1.5px solid var(--brass);
-      border-radius: var(--radius); padding: 22px 24px; margin: 24px 0;
+      background: var(--cream-warm);
+      border: 1px solid var(--brass);
+      padding: 26px 30px;
+      margin: 28px 0;
+      position: relative;
     }
-    .callout strong { color: var(--ink); font-weight: 700; }
+    .callout::before, .callout::after {
+      content: '';
+      position: absolute;
+      width: 18px; height: 1px;
+      background: var(--brass);
+    }
+    .callout::before { top: -1px; left: -1px; }
+    .callout::after { bottom: -1px; right: -1px; }
+    .callout p { margin-bottom: 14px; color: var(--ink-soft); }
     .callout p:last-child { margin-bottom: 0; }
-
-    footer {
-      background: var(--ink); color: var(--ink-light); text-align: center;
-      padding: 32px 24px; font-size: 0.8rem; line-height: 1.85;
-    }
-    footer a { color: var(--cream); text-decoration: none; }
-    footer a:hover { color: var(--brass); }
-    .footer-links { margin-bottom: 8px; }
-    .footer-links a { margin: 0 10px; }
+    .callout strong { color: var(--ink); font-weight: 500; }
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <a href="/">West Michigan <span>Bath Audit</span></a>
-      <sub>Independent Bath Remodel Audits</sub>
-    </div>
-    <div class="header-right">
-      <a class="header-phone" href="tel:+16163259505">(616) 325-9505</a>
-      <a class="call-link" href="/#form">Get Free Audit</a>
+
+  <header class="site">
+    <div class="row">
+      <a class="site-logo" href="/" aria-label="West Michigan Bath Audit">
+        <svg viewBox="0 0 620 110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <g transform="translate(50, 55)">
+            <circle class="wba-mark-stroke" cx="0" cy="0" r="30" fill="none" stroke="#1F4D5A" stroke-width="2"/>
+            <line class="wba-mark-stroke" x1="-20" y1="0" x2="20" y2="0" stroke="#1F4D5A" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="13" cy="-13" r="3" fill="#B08D57"/>
+          </g>
+          <line x1="105" y1="28" x2="105" y2="82" stroke="#B08D57" stroke-width="1" opacity="0.55"/>
+          <text x="125" y="58" font-family="Fraunces, serif" font-weight="400" font-size="38" fill="#1F4D5A" letter-spacing="-0.02em" style="font-variation-settings: 'opsz' 96, 'SOFT' 40;">WBA<tspan fill="#B08D57">.</tspan></text>
+          <text x="125" y="80" font-family="Manrope, sans-serif" font-weight="300" font-size="9" fill="#1A1A1A" letter-spacing="0.42em">WEST · MICHIGAN · BATH · AUDIT</text>
+        </svg>
+      </a>
+      <nav class="site-nav">
+        <a class="nav-link" href="/process.html">Process</a>
+        <a class="nav-link" href="/cost-guide.html">Cost guide</a>
+        <a class="tel" href="tel:+16163259505">(616) 325-9505</a>
+        <a class="call-link" href="/#form">Get matched</a>
+      </nav>
     </div>
   </header>
 
   <section class="page-hero">
-    <span class="eyebrow">Privacy Policy</span>
-    <h1>How we handle your information.</h1>
-    <p>Plain-language terms. No data sold to third-party aggregators. No information sent to call centers. Transparent sharing only with the verified contractors who quote your project.</p>
-    <p class="effective">Effective date: May 21, 2026</p>
+    <div class="wrap">
+      <p class="eyebrow">Privacy Policy</p>
+      <h1>How we handle <em>your</em> information.</h1>
+      <p class="lede">Plain-language terms. No data sold to third-party aggregators. No information sent to call centers. Transparent sharing only with the verified contractors who quote your project.</p>
+      <p class="effective"><span>Effective</span>May 21, 2026</p>
+    </div>
   </section>
 
   <main class="content">
-    <h2>1. Who we are</h2>
-    <p>West Michigan Bath Audit ("we," "us," "our") is an independent bath remodel audit and contractor-matching service operating in West Michigan. Our mailing address is Grand Rapids, MI. You can reach us at <a href="mailto:info@westmichiganbathaudit.com">info@westmichiganbathaudit.com</a> or <a href="tel:+16163259505">(616) 325-9505</a>.</p>
+    <h2><span class="num">01</span>Who we are</h2>
+    <p>West Michigan Bath Audit (&ldquo;we,&rdquo; &ldquo;us,&rdquo; &ldquo;our&rdquo;) is a local bath contractor-matching service operating in West Michigan. We match homeowners with up to three vetted local bath contractors. We do not install bathrooms. Our mailing address is Grand Rapids, MI. You can reach us at <a href="mailto:info@westmichiganbathaudit.com">info@westmichiganbathaudit.com</a> or <a href="tel:+16163259505">(616) 325-9505</a>.</p>
 
-    <h2>2. What we collect</h2>
+    <h2><span class="num">02</span>What we collect</h2>
     <p>When you submit a form on this site, we collect:</p>
     <ul>
       <li>Your name</li>
@@ -124,48 +175,47 @@
     </ul>
     <p>We do not collect Social Security numbers, financial account numbers, or other sensitive identifiers. We do not ask for them.</p>
 
-    <h2>3. How we use it</h2>
+    <h2><span class="num">03</span>How we use it</h2>
     <p>We use your information only to:</p>
     <ul>
-      <li>Contact you to schedule your free bath audit</li>
-      <li>Connect you with up to three verified contractors in our West Michigan network so they can quote your project</li>
-      <li>Send your written audit summary</li>
+      <li>Confirm your submission and answer any questions about the match</li>
+      <li>Match you with up to three vetted contractors in our West Michigan network so they can reach out and quote your project</li>
       <li>Follow up if your project changes status (and at most once at 90 days if you stop responding)</li>
       <li>Measure which of our ads and pages are working, so we can improve them</li>
     </ul>
 
-    <h2>4. Text messages (SMS) and phone calls</h2>
+    <h2><span class="num">04</span>Text messages (SMS) and phone calls</h2>
     <div class="callout">
-      <p><strong>By submitting a form on this site, you agree to receive phone calls and text messages from West Michigan Bath Audit at the number you provide.</strong> Message frequency varies. Message and data rates may apply. Consent is not a condition of purchase &mdash; you can request the audit by phone or email instead.</p>
+      <p><strong>By submitting a form on this site, you agree to receive phone calls and text messages from West Michigan Bath Audit at the number you provide.</strong> Message frequency varies. Message and data rates may apply. Consent is not a condition of purchase — you can request the match by phone or email instead.</p>
       <p>Text <strong>STOP</strong> to any message to opt out. Text <strong>HELP</strong> for assistance. To stop calls, ask the team member during your next call or email <a href="mailto:info@westmichiganbathaudit.com">info@westmichiganbathaudit.com</a>.</p>
     </div>
-    <p>Our texts are sent for two purposes only: (a) confirming and scheduling your free bath audit, and (b) delivering your audit summary or a single follow-up if you stop responding. We do not send marketing blasts, promotional offers, or third-party messages.</p>
+    <p>Our texts are sent for two purposes only: (a) confirming your submission and the contractor match, and (b) a single follow-up if you stop responding. We do not send marketing blasts, promotional offers, or third-party messages.</p>
 
-    <h2>5. Email</h2>
-    <p>If you provide an email address, we use it to send your written audit summary and any documents related to your bath project. We may also send a short follow-up email if you go quiet during scheduling. We do not add you to a marketing email list, and we do not sell your email to anyone. You can unsubscribe at any time by replying to any email or by writing to <a href="mailto:info@westmichiganbathaudit.com">info@westmichiganbathaudit.com</a>.</p>
+    <h2><span class="num">05</span>Email</h2>
+    <p>If you provide an email address, we use it to confirm your contractor match and answer any questions you send us. We may also send a short follow-up email if you go quiet. We do not add you to a marketing email list, and we do not sell your email to anyone. You can unsubscribe at any time by replying to any email or by writing to <a href="mailto:info@westmichiganbathaudit.com">info@westmichiganbathaudit.com</a>.</p>
 
-    <h2>6. Who we share information with</h2>
+    <h2><span class="num">06</span>Who we share information with</h2>
     <p>The only third parties who see your contact information are:</p>
     <ul>
-      <li><strong>Up to three verified bath contractors in our West Michigan network.</strong> They see your name, phone, email (if provided), ZIP, and bath condition so each one can reach out and provide a quote against the audit-defined scope. Every contractor in our network signs a written confidentiality agreement with us that prohibits selling, reselling, or sharing your information with anyone outside their own quoting team, prohibits adding you to marketing lists, and requires them to stop contact if you ask.</li>
+      <li><strong>Up to three vetted bath contractors in our West Michigan network.</strong> They see your name, phone, email (if provided), ZIP, and the current state of your bath so each one can reach out and provide a quote. Every contractor in our network signs a written agreement with us that prohibits selling, reselling, or sharing your information with anyone outside their own quoting team, prohibits adding you to marketing lists, and requires them to stop contact if you ask.</li>
       <li><strong>Our service providers.</strong> We use third-party tools to run this site and our business: Notion (lead database), Resend (email delivery), Cloudflare (hosting and security), Meta (advertising), and Google (analytics and advertising). Each handles only the data they need and is bound by their own privacy terms.</li>
     </ul>
-    <p><strong>What "share with up to three contractors" actually means.</strong> When you submit the audit form, we share your contact information and project details with up to three contractors who fit your scope, geography, and project type &mdash; not a wider pool, not the highest bidder, and not anyone outside our written-agreement network. Each of those contractors may then contact you directly to provide a quote. You can opt out of further contact from any of them at any time, and we will pull any contractor from the rotation that you tell us isn&rsquo;t treating you well.</p>
+    <p><strong>What &ldquo;share with up to three contractors&rdquo; actually means.</strong> When you submit the form, we share your contact information and project details with up to three contractors who fit your zip and project type — not a wider pool, not the highest bidder, and not anyone outside our written-agreement network. Each of those contractors may then contact you directly to provide a quote. You can opt out of further contact from any of them at any time, and we will pull any contractor from the rotation that you tell us isn&rsquo;t treating you well.</p>
     <p><strong>What we do not do.</strong> We do not sell your information to third-party lead aggregators. We do not pass your information to call centers, brokerage marketplaces, or general marketing services. We do not auction your project to whoever pays most. We do not share your information with any contractor outside the up-to-three you are matched with.</p>
 
-    <h2>7. Cookies and tracking</h2>
+    <h2><span class="num">07</span>Cookies and tracking</h2>
     <p>We use cookies and similar technologies to remember your form progress, measure how visitors use the site, and show you relevant ads on Meta (Facebook, Instagram) and Google. Specifically:</p>
     <ul>
-      <li><strong>Meta Pixel</strong> &mdash; tracks which pages you visit and whether you submit a form, so we can measure our Meta ads and show similar visitors more relevant ads.</li>
-      <li><strong>Google Analytics</strong> &mdash; tracks visit counts, page views, and traffic sources.</li>
-      <li><strong>Visitor ID</strong> &mdash; a random identifier stored in your browser so we can de-duplicate submissions if you start and finish a form across two visits.</li>
+      <li><strong>Meta Pixel</strong> — tracks which pages you visit and whether you submit a form, so we can measure our Meta ads and show similar visitors more relevant ads.</li>
+      <li><strong>Google Analytics</strong> — tracks visit counts, page views, and traffic sources.</li>
+      <li><strong>Visitor ID</strong> — a random identifier stored in your browser so we can de-duplicate submissions if you start and finish a form across two visits.</li>
     </ul>
     <p>You can disable cookies in your browser settings or opt out of Meta and Google ad personalization through their respective ad-preference dashboards.</p>
 
-    <h2>8. How long we keep your information</h2>
-    <p>We keep your contact information and audit submission for as long as you remain in our contractor-matching network or for 36 months after your last interaction, whichever is shorter. After that, your record is archived without contact information attached. You can request earlier deletion at any time by emailing <a href="mailto:info@westmichiganbathaudit.com">info@westmichiganbathaudit.com</a>.</p>
+    <h2><span class="num">08</span>How long we keep your information</h2>
+    <p>We keep your contact information and form submission for as long as your project is active in our matching system or for 36 months after your last interaction, whichever is shorter. After that, your record is archived without contact information attached. You can request earlier deletion at any time by emailing <a href="mailto:info@westmichiganbathaudit.com">info@westmichiganbathaudit.com</a>.</p>
 
-    <h2>9. Your rights</h2>
+    <h2><span class="num">09</span>Your rights</h2>
     <p>You can ask us at any time to:</p>
     <ul>
       <li>See a copy of the information we have about you</li>
@@ -175,16 +225,16 @@
     </ul>
     <p>Email <a href="mailto:info@westmichiganbathaudit.com">info@westmichiganbathaudit.com</a> with your request and we&rsquo;ll respond within 7 business days.</p>
 
-    <h2>10. Security</h2>
+    <h2><span class="num">10</span>Security</h2>
     <p>Your information travels over an encrypted (HTTPS) connection. Our lead database is hosted in Notion with access restricted to authorized team members. Our backend runs on Cloudflare with industry-standard transit and at-rest encryption. No system is perfectly secure, but we follow modern practices and never store payment information (we don&rsquo;t collect any).</p>
 
-    <h2>11. Children</h2>
+    <h2><span class="num">11</span>Children</h2>
     <p>This site and our services are intended for homeowners 18 and older. We do not knowingly collect information from anyone under 18. If you believe a minor has submitted a form, email us and we&rsquo;ll delete the record.</p>
 
-    <h2>12. Changes to this policy</h2>
+    <h2><span class="num">12</span>Changes to this policy</h2>
     <p>If we change this policy, we&rsquo;ll update the effective date at the top of this page. Material changes will also be announced in a notice on our homepage for at least 30 days.</p>
 
-    <h2>13. Contact us</h2>
+    <h2><span class="num">13</span>Contact us</h2>
     <p>Questions, complaints, or requests:</p>
     <ul>
       <li>Email: <a href="mailto:info@westmichiganbathaudit.com">info@westmichiganbathaudit.com</a></li>
@@ -193,16 +243,39 @@
     </ul>
   </main>
 
-  <footer>
-    <div class="footer-links">
-      <a href="/">Home</a>
-      <a href="/process.html">How it works</a>
-      <a href="/cost-guide.html">Cost guide</a>
-      <a href="/financing.html">Financing</a>
-      <a href="/privacy-policy.html">Privacy</a>
+  <footer class="site">
+    <div class="row">
+      <div class="mark">
+        <svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" aria-label="WBA — West Michigan Bath Audit">
+          <g transform="translate(360, 80)">
+            <circle cx="0" cy="0" r="52" fill="none" stroke="#FAF7F2" stroke-width="2.4"/>
+            <line x1="-36" y1="0" x2="36" y2="0" stroke="#FAF7F2" stroke-width="2.4" stroke-linecap="round"/>
+            <circle cx="24" cy="-24" r="4.4" fill="#D4B584"/>
+          </g>
+          <text x="360" y="220" text-anchor="middle" font-family="Fraunces, serif" font-weight="400" font-size="88" fill="#FAF7F2" letter-spacing="-0.02em" style="font-variation-settings: 'opsz' 144, 'SOFT' 40;">WBA<tspan fill="#D4B584">.</tspan></text>
+          <line x1="280" y1="244" x2="440" y2="244" stroke="#D4B584" stroke-width="1.2" opacity="0.75"/>
+          <text x="360" y="278" text-anchor="middle" font-family="Manrope, sans-serif" font-weight="300" font-size="13" fill="#FAF7F2" letter-spacing="0.42em">WEST · MICHIGAN · BATH · AUDIT</text>
+        </svg>
+      </div>
+      <div class="col-r">
+        <div class="nav">
+          <a href="/">Home</a>
+          <a href="/process.html">How it works</a>
+          <a href="/cost-guide.html">2026 cost guide</a>
+          <a href="/financing.html">Financing</a>
+          <a href="/privacy-policy.html">Privacy</a>
+        </div>
+        <div class="info">
+          Grand Rapids, MI<br/>
+          <a href="tel:+16163259505">(616) 325-9505</a><br/>
+          <a href="mailto:info@westmichiganbathaudit.com">info@westmichiganbathaudit.com</a>
+        </div>
+      </div>
+      <p class="fine">
+        &copy; 2026 West Michigan Bath Audit <span class="brass">·</span> A local contractor-matching service for West Michigan homeowners. <span class="brass">·</span> Free for homeowners. Funded by the contractor network.
+      </p>
     </div>
-    <p>&copy; 2026 West Michigan Bath Audit &middot; Independent bath remodel audits</p>
-    <p>Grand Rapids, MI &nbsp;|&nbsp; <a href="tel:+16163259505">(616) 325-9505</a> &nbsp;|&nbsp; <a href="mailto:info@westmichiganbathaudit.com">info@westmichiganbathaudit.com</a></p>
   </footer>
+
 </body>
 </html>
