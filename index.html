@@ -65,6 +65,18 @@
       .hero { padding: 64px var(--pad-x) 72px; }
       .hero-inner { grid-template-columns: 1fr; gap: 48px; }
     }
+    @media (max-width: 640px) {
+      /* Declutter the mobile hero: ease the headline, hide the bullet list
+         (it repeats the trust bar just below), tighten the path to the form.
+         Selectors are scoped (.hero .x) to out-specify the base rules that
+         appear later in this stylesheet. */
+      .hero { padding: 44px var(--pad-x) 52px; }
+      .hero .hero-left h1 { font-size: 34px; line-height: 1.08; margin-bottom: 18px; }
+      .hero .hero-desc { font-size: 16px; line-height: 1.5; margin-bottom: 0; }
+      .hero .hero-bullets { display: none; }
+      .hero .hero-inner { gap: 30px; }
+      .hero .hero-inner > * { min-width: 0; }
+    }
     .hero-left { padding-top: 12px; }
     .hero .eyebrow { color: var(--brass-light); margin-bottom: 22px; }
     .hero .eyebrow::before { background: var(--brass-light); opacity: 0.7; }
@@ -801,7 +813,7 @@
 
   <!-- ALERT BAR -->
   <div class="alert-bar">
-    Grand Rapids <span class="sep">·</span> Holland <span class="sep">·</span> Grand Haven <span class="sep">·</span> Muskegon <span class="sep">·</span> <span class="soft">Free contractor match · No pressure</span>
+    <span class="cities">Grand Rapids <span class="sep">·</span> Holland <span class="sep">·</span> Grand Haven <span class="sep">·</span> Muskegon</span> <span class="sep cities-sep">·</span> <span class="soft">Free contractor match · No pressure</span>
   </div>
 
   <!-- HEADER -->

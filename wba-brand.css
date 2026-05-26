@@ -38,7 +38,7 @@
 }
 
 /* -- BASE -------------------------------------------------- */
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
   font-family: var(--sans);
@@ -55,6 +55,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 a { color: var(--teal); }
@@ -93,6 +95,11 @@ img, svg { display: block; max-width: 100%; }
 @media (max-width: 640px) {
   .alert-bar { font-size: 10px; padding: 9px 16px; }
   .alert-bar .sep { margin: 0 8px; }
+  /* On phones, drop the city list + its trailing separator — keep only the
+     value tagline so the bar is one clean line instead of a wrapping marquee. */
+  .alert-bar .cities,
+  .alert-bar .cities-sep { display: none; }
+  .alert-bar .soft { letter-spacing: 0.1em; }
 }
 
 /* -- HEADER ------------------------------------------------ */
